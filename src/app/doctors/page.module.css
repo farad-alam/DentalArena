@@ -1,0 +1,113 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: var(--spacing-16) 0;
+}
+
+.bgSurface {
+  background-color: var(--color-surface);
+}
+
+.profileGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 900px) {
+  .profileGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.profileCard {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.info h2 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.credentials {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0;
+}
+
+.bmdc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.specialization {
+  font-weight: 600;
+  color: var(--color-primary);
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+}
+
+.details p {
+  margin-bottom: var(--spacing-3);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+}
+
+.verificationBox {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.verificationBox h3 {
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.verificationSteps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  text-align: left;
+  background-color: var(--color-surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-sm);
+}

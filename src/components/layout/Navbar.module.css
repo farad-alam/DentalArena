@@ -1,0 +1,77 @@
+.navbar {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  font-family: var(--font-jakarta);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.navLink {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.phone {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .phone {
+    display: block;
+  }
+}
+
+.mobileMenuBtn {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 900px) {
+  .navLinks {
+    display: none;
+  }
+  .actions .btn {
+    display: none;
+  }
+  .mobileMenuBtn {
+    display: block;
+  }
+}

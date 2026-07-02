@@ -1,0 +1,27 @@
+.hero {
+  padding: var(--spacing-16) 0 var(--spacing-12);
+  background-color: var(--color-primary-light);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  max-width: 700px;
+  margin: 0 auto var(--spacing-8);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}

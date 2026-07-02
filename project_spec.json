@@ -1,0 +1,760 @@
+{
+  "_version": "1.0",
+  "_completed_steps": [
+    "step-1-brief-intake",
+    "step-2-personas",
+    "step-3-context-research",
+    "step-4-keyword-research",
+    "step-5-competitor-research",
+    "step-6-sitemap",
+    "step-7-sections"
+  ],
+
+  "business_name": "DentalArena",
+  "business_type": "A dental clinic in Rajshahi, Bangladesh offering modern dentistry with a gentle-care approach, specializing in root canal treatment, aesthetic tooth restoration, implants, clear aligners, and midline diastema closure under two qualified oral & dental surgeons.",
+
+  "target_audience": {
+    "description": "Local patients in Rajshahi searching for a nearby, trustworthy dentist, as well as patients specifically seeking root canal, implant, or clear aligner treatment. Future expansion planned across Bangladesh.",
+    "pain_points": ["Anxiety or fear around dental procedures, especially root canals and implants", "Difficulty finding a nearby clinic with verified, specialized expertise (not just a generic dentist)", "Uncertainty about which treatment they need or what it involves"],
+    "goals": ["Find a qualified, trustworthy dentist near them in Rajshahi", "Book an appointment quickly and easily, by phone or online", "Understand treatment options (root canal, implants, aligners, cosmetic restoration) before visiting"]
+  },
+
+  "primary_goal": "Get visitors to call or book an appointment at the clinic.",
+  "success_metric": "20 appointment calls per month",
+  "value_proposition_draft": "Specific, specialized expertise — root canal treatment, implants, and clear aligners all under one roof — delivered with a gentle-care approach, by two dedicated oral & dental surgeons.",
+
+  "constraints": { "budget_range": "No fixed budget?", "timeline": "Flexible, no rush", "platform_preference": "Next.js", "existing_brand": false },
+  "brand_assets": { "has_logo": false, "has_colors": false, "has_fonts": false, "notes": "All brand assets (logo, colors, fonts) need to be created from scratch." },
+
+  "known_competitors": ["https://rajspdc.com/", "https://dentalartistrybd.com/", "https://bsdhbd.com/", "https://techdentalcare.com/"],
+  "additional_notes": "Single-location site for now (Rajshahi only). Clinic details: Address - 76, Bospara, Bazar–Talaimari Road, Rajshahi (east end of Shah Makhdoom College). Appointment phone: 01773-597365. Doctors: Dr. Md. Fahim Faisal (BDS-RMU, BMDC Reg 17155, root canal & aesthetic restoration specialist, phone 01627-525270, available Sat-Thu 10AM-10PM, Fri by appointment only) and Dr. Hasna Akter Suma (BDS-RMU, BMDC Reg 17322, implant/clear aligner/diastema closure specialist, phone 01946-164121).",
+
+  "personas": [
+    {
+      "name": "Rakib",
+      "tagline": "In real pain, scared of losing the tooth, just wants someone qualified who can see him today without hidden costs.",
+      "demographics": { "age_range": "28–40", "role": "Office worker / small business employee in Rajshahi", "location": "Rajshahi city, within a few kilometers of the clinic", "income_range": "BDT 25,000–45,000/month", "tech_comfort": "medium" },
+      "context": "A tooth that's been mildly sensitive for weeks has suddenly become sharply painful, often at night. He's put off going to a dentist out of fear and cost worry, but the pain has now forced the decision.",
+      "pain_points": ["The pain is bad enough that he's genuinely scared he'll lose the tooth if he waits any longer", "He's heard root canals are painful and dreads the procedure almost as much as the toothache itself", "He doesn't know if this random clinic he found on Google is actually run by a licensed dentist or just a 'dental shop'", "He's worried the quoted price will balloon once he's already in the chair"],
+      "goals": ["Get the pain resolved as soon as possible, ideally same-day or next-day", "Confirm the dentist is genuinely qualified before walking in", "Know roughly what it will cost before he commits to treatment"],
+      "objections": ["How do I know this clinic isn't just a general practice slapping 'root canal specialist' on their sign?", "What if the quoted price doesn't include the crown afterward and I get hit with a bigger bill?", "What if it hurts as much as everyone online says root canals hurt?"],
+      "search_terms": ["root canal doctor Rajshahi", "দাঁতের ব্যথা ডাক্তার রাজশাহী", "dentist near Talaimari Rajshahi", "root canal treatment cost Rajshahi", "emergency dentist Rajshahi open now"],
+      "trust_builders": ["Visible BMDC registration number he can verify himself (text-to-verify mentioned explicitly)", "Clear statement that Dr. Fahim is specially trained in root canal treatment, not just 'general dentistry'", "A rough, honest price range for root canal treatment stated upfront, not hidden", "Photos of a clean, modern clinic with visible sterilization equipment"],
+      "decision_triggers": ["Seeing the clinic is open right now or has a slot today/tomorrow, with a phone number he can call immediately", "A short line reassuring him the procedure is done gently with proper anesthesia, addressing the pain fear directly"],
+      "quote": "I've been putting this off for weeks because I'm scared of what it'll cost and scared of the pain, but honestly right now I just need someone who actually knows what they're doing and can see me today."
+    },
+    {
+      "name": "Nusrat",
+      "tagline": "Not in pain, but self-conscious about her smile for months — she won't book until she trusts the dentist's specific skill.",
+      "demographics": { "age_range": "24–35", "role": "Working professional or graduate student in Rajshahi", "location": "Rajshahi city", "income_range": "BDT 30,000–60,000/month (or family-supported)", "tech_comfort": "high" },
+      "context": "She's had a gap between her front teeth or a missing tooth that bothers her in photos and when she speaks. It's not urgent, so she's been researching quietly for a while.[inferred]",
+      "pain_points": ["She feels a bit embarrassed smiling fully in photos or on video calls because of the gap or missing tooth", "She's confused about whether she needs an implant, a bridge, or if clear aligners could fix it instead — most clinic sites she's seen don't explain this clearly", "She's worried about spending a large amount (potentially tens of thousands of taka) on a dentist who turns out to be inexperienced with this specific procedure"],
+      "goals": ["Understand which treatment (implant, aligner, or diastema closure) actually fits her situation before she even calls", "Find a dentist locally in Rajshahi who has specific, demonstrated experience with implants or aligners, not just general dentistry", "Get a realistic sense of cost and timeline before committing"],
+      "objections": ["What if I spend all this money and the result doesn't look natural?", "Most clinic websites just say 'we do implants' — how do I know this dentist has actually done many of these, not just a few?", "Is this something I could get done more affordably or reliably in Dhaka instead of locally?"],
+      "search_terms": ["clear aligner dentist Rajshahi", "implant dentist Rajshahi cost", "midline diastema closure Rajshahi", "gap teeth treatment near me", "dental implant price Rajshahi"],
+      "trust_builders": ["Dr. Suma's profile explicitly highlighting she is specially trained in implants, clear aligners, and diastema closure — not generic dentistry", "Before/after photos of similar cases (gap closure, implant results)", "A clear, honest explanation of what each treatment involves and roughly how long it takes", "BMDC registration clearly listed so she can verify credentials herself"],
+      "decision_triggers": ["Finding a treatment explanation that finally makes clear which option (implant vs. aligner vs. diastema closure) applies to her specific case", "A simple way to book a consultation without commitment, so she can ask questions in person before deciding"],
+      "quote": "I don't need this fixed urgently, but every time I see a photo of myself I notice it, and I'm not going to spend this much money on a dentist unless I'm sure they actually know what they're doing with implants specifically."
+    }
+  ],
+
+  "market_context": {
+    "industry_summary": "Dental care serves a growing, health-aware population that increasingly wants both pain relief (root canal, extractions) and cosmetic/restorative improvement (implants, aligners, aesthetic restoration). Unlike most other medical specialties, Bangladeshis largely do not travel abroad for dental treatment — they trust local dentists.",
+    "market_direction": "growing",
+    "market_signals": ["Bangladesh's oral care market is projected to grow at a CAGR of roughly 7.7–12% through 2029–2030", "Globally, dental implants and clear/invisible aligners are the fastest-growing treatment segments, with cosmetic dentistry projected at ~7.8% CAGR", "Despite 450,000–800,000 Bangladeshis traveling abroad annually for other medical treatment, dental care is a category patients specifically do NOT go abroad for"],
+    "key_trends": [
+      { "trend": "Rising demand for implants and clear aligners as elective, appearance-driven treatments", "implication": "The site needs dedicated, detailed pages for implants and clear aligners with pricing ranges and before/after proof" },
+      { "trend": "Patients increasingly expect transparent, upfront pricing", "implication": "Publish honest price ranges directly on the site" },
+      { "trend": "BMDC registration verification is a widely known, actively used trust check", "implication": "Display both doctors' BMDC registration numbers prominently and explicitly invite patients to verify them" },
+      { "trend": "Patients specifically evaluate clinics on sterilization standards", "implication": "Include a short 'hygiene & safety' section with a photo of sterilization equipment" },
+      { "trend": "Word-of-mouth and Facebook/Google review threads remain a dominant discovery channel", "implication": "Make the site easy to link/share; treat Google Business Profile as part of the digital presence" }
+    ],
+    "industry_vocabulary": ["root canal treatment (RCT)", "BMDC registration", "oral & dental surgeon", "endodontist / endodontic treatment", "clear aligner", "midline diastema closure", "dental implant", "aesthetic tooth restoration", "scaling and polishing", "crown (zirconia, PFM, E-Max)", "sterilization / autoclave", "consultation fee", "painless / gentle treatment", "before and after (smile results)", "same-day appointment", "dental checkup"],
+    "content_angles": ["'How do I know if I need a root canal or just a filling?'", "'What does a root canal actually feel like?'", "'Implant vs. clear aligner vs. diastema closure — which fixes my gap?'", "'How to verify your dentist is BMDC registered'", "'What does root canal / implant treatment actually cost?'", "'What to expect at your first visit to DentalArena'", "Before/after gallery of aesthetic restoration and diastema closure cases"],
+    "trust_factors": ["BMDC registration numbers displayed and verifiable", "Explicit statement of each doctor's specific specialized training", "Visible sterilization/hygiene standards", "Transparent, upfront price ranges", "Real Google/Facebook reviews and testimonials", "Before/after photos for cosmetic and restorative cases", "Clear appointment availability and hours"],
+    "seasonal_considerations": "No major seasonality found, though wedding season and Eid periods anecdotally see a rise in cosmetic/aesthetic treatment interest.",
+    "regulatory_notes": "All practicing dentists in Bangladesh must hold a BDS degree and be registered with BMDC; patients can verify registration by texting the registration number to 16321."
+  },
+
+  "keyword_research": {
+    "seed_terms": ["root canal doctor Rajshahi", "implant dentist Rajshahi cost", "clear aligner dentist Rajshahi", "midline diastema closure Rajshahi", "dental implant price Rajshahi", "dentist near Talaimari Rajshahi"],
+    "primary_keywords": [
+      { "term": "root canal treatment Rajshahi", "intent": "transactional", "priority": "high", "notes": "Validated seed term with strong local buying intent." },
+      { "term": "dental implant Rajshahi", "intent": "transactional", "priority": "high", "notes": "Rajshahi-specific implant pages are scarce — clear local gap." },
+      { "term": "clear aligner Rajshahi", "intent": "transactional", "priority": "high", "notes": "Aligns directly with Dr. Suma's specialization." },
+      { "term": "dentist near me Rajshahi", "intent": "navigational", "priority": "medium", "notes": "High volume but high competition from directories." },
+      { "term": "root canal cost Rajshahi", "intent": "transactional", "priority": "high", "notes": "Supports the pricing page." },
+      { "term": "midline diastema closure treatment", "intent": "transactional", "priority": "medium", "notes": "Near-uncontested niche locally." },
+      { "term": "BMDC registered dentist Rajshahi", "intent": "navigational", "priority": "medium", "notes": "Useful for the Doctors page." },
+      { "term": "emergency dentist Rajshahi", "intent": "transactional", "priority": "high", "notes": "Matches Rakib's pain-driven search moment." }
+    ],
+    "long_tail_keywords": [
+      { "term": "does a root canal hurt Bangladesh", "intent": "informational", "content_angle": "'What does a root canal actually feel like?'" },
+      { "term": "root canal vs tooth extraction which is better", "intent": "comparative", "content_angle": "'How do I know if I need a root canal or just a filling?'" },
+      { "term": "dental implant vs clear aligner vs diastema closure", "intent": "comparative", "content_angle": "'Implant vs. clear aligner vs. diastema closure — which fixes my gap?'" },
+      { "term": "how to verify dentist BMDC registration Bangladesh", "intent": "informational", "content_angle": "'How to verify your dentist is BMDC registered'" },
+      { "term": "root canal treatment cost in Bangladesh", "intent": "informational", "content_angle": "'What does root canal / implant treatment actually cost?'" },
+      { "term": "dental implant cost Bangladesh BDT", "intent": "informational", "content_angle": "'What does root canal / implant treatment actually cost?'" },
+      { "term": "clear aligner cost Bangladesh monthly", "intent": "informational", "content_angle": "'What does root canal / implant treatment actually cost?'" },
+      { "term": "what to expect first dental visit", "intent": "informational", "content_angle": "'What to expect at your first visit to DentalArena'" },
+      { "term": "gap teeth treatment options", "intent": "informational", "content_angle": "'Implant vs. clear aligner vs. diastema closure — which fixes my gap?'" },
+      { "term": "root canal same day appointment Rajshahi", "intent": "transactional", "content_angle": null },
+      { "term": "female dentist Rajshahi implants", "intent": "transactional", "content_angle": null },
+      { "term": "clear aligner vs metal braces adults", "intent": "comparative", "content_angle": "'Implant vs. clear aligner vs. diastema closure — which fixes my gap?'" },
+      { "term": "how long does root canal treatment take", "intent": "informational", "content_angle": "'What to expect at your first visit to DentalArena'" },
+      { "term": "sterilization standards dental clinic Bangladesh", "intent": "informational", "content_angle": null },
+      { "term": "before after diastema closure photos", "intent": "comparative", "content_angle": "Before/after gallery of aesthetic restoration and diastema closure cases" },
+      { "term": "dental clinic opening hours Friday appointment Rajshahi", "intent": "navigational", "content_angle": null }
+    ],
+    "people_also_ask": ["Does a root canal hurt?", "Is it cheaper to extract a tooth or get a root canal?", "How much does a root canal cost in Bangladesh?", "How much does a dental implant cost in Bangladesh?", "How do I verify a dentist's BMDC registration?", "What is the difference between clear aligners and braces?", "How long does clear aligner treatment take?", "Can midline diastema (gap teeth) be fixed without braces?", "What happens if I leave a cavity untreated?", "How many visits does a root canal take?"],
+    "negative_keywords": ["'free dental checkup' — attracts one-off bargain seekers unlikely to book paid treatment", "'dentist near me' (unqualified, no city) — too broad, dominated by directories", "'DIY tooth pain relief' — wrong intent for a clinic site", "'dental college Rajshahi' — attracts students/academic searchers, not patients", "'Invisalign' (brand name) — risks misrepresenting the exact product offered unless confirmed"],
+    "page_keyword_map": [
+      { "page_type": "Homepage", "primary_keyword": "dentist near me Rajshahi", "supporting_keywords": ["BMDC registered dentist Rajshahi", "DentalArena Rajshahi", "modern dentistry gentle care"], "page_goal": "Immediately orient both urgent and planning patients, surface phone number and hours, and route them to the right service page or call button." },
+      { "page_type": "Root Canal Treatment (service page)", "primary_keyword": "root canal treatment Rajshahi", "supporting_keywords": ["root canal cost Rajshahi", "does a root canal hurt", "root canal same day appointment Rajshahi"], "page_goal": "Reassure a pain-driven visitor, state price range honestly, and get them to call immediately." },
+      { "page_type": "Dental Implants (service page)", "primary_keyword": "dental implant Rajshahi", "supporting_keywords": ["dental implant cost Bangladesh BDT", "female dentist Rajshahi implants", "before after implant photos"], "page_goal": "Build confidence in Dr. Suma's specific implant expertise with proof and clear pricing, driving a consultation booking." },
+      { "page_type": "Clear Aligners & Diastema Closure (service page)", "primary_keyword": "clear aligner Rajshahi", "supporting_keywords": ["midline diastema closure treatment", "clear aligner cost Bangladesh monthly", "clear aligner vs metal braces adults"], "page_goal": "Resolve Nusrat's treatment-choice confusion and convert quiet researchers into consultation bookings." },
+      { "page_type": "Pricing / Cost Guide", "primary_keyword": "root canal treatment cost in Bangladesh", "supporting_keywords": ["dental implant cost Bangladesh BDT", "clear aligner cost Bangladesh monthly", "consultation fee"], "page_goal": "Remove the single biggest shared objection (hidden costs) across both personas by publishing honest ranges." },
+      { "page_type": "About / Doctors", "primary_keyword": "BMDC registered dentist Rajshahi", "supporting_keywords": ["Dr. Md. Fahim Faisal BDS RMU", "Dr. Hasna Akter Suma BDS RMU", "how to verify dentist BMDC registration Bangladesh"], "page_goal": "Convert credential-checking visitors into confident bookers by making BMDC verification effortless." },
+      { "page_type": "FAQ", "primary_keyword": "gap teeth treatment options", "supporting_keywords": ["how long does root canal treatment take", "what to expect first dental visit", "sterilization standards dental clinic Bangladesh"], "page_goal": "Capture remaining long-tail informational searches and pre-answer objections before the contact step." }
+    ]
+  },
+
+  "competitor_research": {
+    "competitors_analysed": [
+      { "url": "https://rajspdc.com/", "name": "Rajshahi Specialised Dental Centre (RajSpDc)", "sections": [ { "name": "Hero / What We Do", "purpose": "Show a 6-icon service grid", "content_quality": "weak", "notes": "Generic one-line descriptions, no pricing." }, { "name": "Welcome / About", "purpose": "Position as first multi-speciality centre in Rajshahi", "content_quality": "average", "notes": "Real claim but no doctor credentials shown." }, { "name": "Equipment & Doctors", "purpose": "Claim modern equipment", "content_quality": "weak", "notes": "Vague, no specifics beyond laser dentistry/digital X-ray." }, { "name": "Testimonials", "purpose": "Build trust", "content_quality": "weak", "notes": "Two thin, unlabeled testimonials." }, { "name": "Photo Gallery", "purpose": "Show clinic environment", "content_quality": "average", "notes": "Authentic but unpolished." } ], "cta": { "primary_text": "Get Appointment", "placement": "Header and hero", "frequency": "medium" }, "trust_signals": ["'First and only multi-speciality' claim", "Two unlabeled testimonials", "Vague equipment claims"], "value_positioning": "\"The first and only multi-speciality dental centre in Rajshahi\"", "pricing_transparency": "hidden", "strengths": ["Real local Rajshahi presence", "Clear category-leader positioning", "Functional booking site"], "weaknesses": ["No individual doctor credential pages", "Zero pricing anywhere", "Testimonials too thin to persuade"] },
+      { "url": "https://dentalartistrybd.com/", "name": "Dental Artistry", "sections": [ { "name": "Hero", "purpose": "Tagline + 3 trust icons", "content_quality": "average", "notes": "Addresses pain-fear with icon but no explanation." }, { "name": "Doctor Profile", "purpose": "Deep-dive on Dr. Nasker's credentials", "content_quality": "strong", "notes": "FICD USA, Korea implant training, diastema closure specialization — closest direct competitor." }, { "name": "Services Grid", "purpose": "List 13+ services", "content_quality": "average", "notes": "Identical placeholder text across cards." }, { "name": "Why Choose Us / Stats", "purpose": "Animated counters", "content_quality": "weak", "notes": "Counters render broken as '0+'." }, { "name": "Testimonials", "purpose": "Patient quotes", "content_quality": "weak", "notes": "Unedited Lorem-ipsum placeholder text, still live." }, { "name": "Appointment Form", "purpose": "Online request", "content_quality": "average", "notes": "Functional form beyond phone-only." } ], "cta": { "primary_text": "Book Appointment", "placement": "Header, hero, repeated", "frequency": "high" }, "trust_signals": ["Detailed doctor credentials", "Broken stat counters (negative)", "Fake testimonials (negative)"], "value_positioning": "\"Top-tier dental care with a focus on comfort\"", "pricing_transparency": "hidden", "strengths": ["Strongest doctor-trust content found", "Real appointment form", "Same specialty niche as DentalArena"], "weaknesses": ["Visible broken/placeholder content live on site", "No pricing", "Generic repeated service copy"] },
+      { "url": "https://bsdhbd.com/", "name": "Bangladesh Specialized Dental Hospital (BSDH)", "sections": [ { "name": "Video Hero", "purpose": "Autoplay video + tagline", "content_quality": "strong", "notes": "High production value." }, { "name": "Stats Bar", "purpose": "50K+ patients, 98% satisfaction etc.", "content_quality": "average", "notes": "Unsourced numbers." }, { "name": "What Sets Us Apart", "purpose": "Bullet list answering objections", "content_quality": "strong", "notes": "Best-practice scannable format." }, { "name": "Founder Message", "purpose": "Named implant/TMJ specialist quote", "content_quality": "strong", "notes": "Real academic title." }, { "name": "Team Grid", "purpose": "7 doctor profiles", "content_quality": "strong", "notes": "Most complete team-credibility section reviewed." }, { "name": "Blog / Health Insights", "purpose": "Educational articles", "content_quality": "strong", "notes": "Only competitor publishing this content type." }, { "name": "Awareness Videos", "purpose": "Bangla patient education videos", "content_quality": "strong", "notes": "Addresses real questions in local language." } ], "cta": { "primary_text": "Book Appointment / Schedule Your Appointment", "placement": "Header, hero, after most sections", "frequency": "high" }, "trust_signals": ["Named specialists with titles", "Blog/video content", "Confidence-projecting stats"], "value_positioning": "\"Unique excellence in oral and dental care\"", "pricing_transparency": "hidden", "strengths": ["Best-in-class production quality", "Only competitor with active informational content", "Named specialist depth across whole team"], "weaknesses": ["No pricing despite strong transparency elsewhere", "Unsourced stats", "Dhaka-based — opens local-alternative positioning"] },
+      { "url": "https://techdentalcare.com/tech-dental-treatment-price-list-bangladesh/", "name": "Tech Dental", "sections": [ { "name": "Price List Page", "purpose": "Transparent pricing for 100+ treatments", "content_quality": "strong", "notes": "Clearest differentiation opportunity in the market." }, { "name": "Cost Calculator", "purpose": "Interactive price estimate", "content_quality": "strong", "notes": "No competitor offers this." }, { "name": "Quick Summary Table", "purpose": "8-row price snapshot", "content_quality": "strong", "notes": "Answers top objection instantly." }, { "name": "Branch Navigation", "purpose": "4 Dhaka branches", "content_quality": "average", "notes": "Not relevant to single-location DentalArena." } ], "cta": { "primary_text": "Book Appointment Now", "placement": "Header and price table", "frequency": "medium" }, "trust_signals": ["Fully itemized pricing", "EMI/installment mention", "'No hidden fees' stated"], "value_positioning": "\"Advanced Modern Technology with Transparent Pricing\"", "pricing_transparency": "clear", "strengths": ["Uncontested pricing transparency", "Per-brand implant pricing", "Named prices for exact specialty services"], "weaknesses": ["No doctor credibility or emotional reassurance", "Chain/franchise feel", "Dense, not warm for a self-conscious researcher"] }
+    ],
+    "synthesis": {
+      "table_stakes": ["Hero section with clinic name, tagline, and a persistent phone-call CTA", "Service list/grid covering the core treatments offered", "At least one doctor profile with named qualifications", "Some form of patient testimonials or reviews", "Photo gallery of the clinic", "Visible contact details and location", "Opening hours displayed"],
+      "differentiation_opportunities": ["Publish real, specific pricing ranges combined with genuine, named doctor expertise and a gentle-care tone — no competitor does this together.", "Write genuinely specific, named testimonials with actual treatment and outcome details.", "Build a dedicated Doctors page tying specific training directly to specific treatments.", "Create short educational content addressing documented fears directly, hyper-local to Rajshahi.", "Explicitly position as the credentialed, genuinely local alternative to traveling to Dhaka."],
+      "best_practices_to_match": ["BSDH's 'What Sets Us Apart' scannable bullet list format", "BSDH's and Dental Artistry's named academic credentials for doctors", "Dental Artistry's online appointment request form", "Tech Dental's per-treatment price breakdown structure (shorter, curated version)"],
+      "cta_patterns": { "most_common_text": "Book Appointment / Get Appointment", "observation": "All four competitors converge on 'Book/Get Appointment'. None offer an urgency-specific CTA despite pain-driven patients being a documented need — an ownable wording opportunity." },
+      "recommended_sections": [
+        { "name": "Hero with dual CTA (Call Now / Book Appointment)", "reason": "Table stake across all competitors; splitting serves both personas' urgency levels.", "priority": "must-have" },
+        { "name": "Doctor profile pages (one per doctor, treatment-linked)", "reason": "Differentiation opportunity — no Rajshahi competitor ties named credentials directly to treatments.", "priority": "must-have" },
+        { "name": "Transparent pricing / cost guide section", "reason": "Only Tech Dental offers this; also the #1 documented objection.", "priority": "must-have" },
+        { "name": "Real testimonials with specific treatment and outcome", "reason": "Every competitor's testimonials are weak, thin, or fake.", "priority": "must-have" },
+        { "name": "Hygiene & sterilization section with photo", "reason": "Documented trust factor no competitor explicitly showcases.", "priority": "must-have" },
+        { "name": "Short educational FAQ / 'does it hurt' content", "reason": "Only BSDH publishes this, and only nationally.", "priority": "nice-to-have" },
+        { "name": "Before/after gallery for aesthetic restoration and diastema closure", "reason": "No competitor shows real before/after proof.", "priority": "nice-to-have" },
+        { "name": "Online appointment request form (in addition to phone)", "reason": "Matches Dental Artistry's best practice.", "priority": "nice-to-have" }
+      ]
+    }
+  },
+
+  "sitemap": {
+    "pages": [
+      { "name": "Home", "slug": "/", "purpose": "Orient every visitor within seconds — clinic name, phone number, hours, and a clear path to the right service.", "primary_keyword": "dentist near me Rajshahi", "nav_placement": "none", "priority": "core", "feeds_from": ["primary_goal", "competitor_research.synthesis.table_stakes", "keyword_research.page_keyword_map"], "notes": "Anchor of the entire journey; accessed via logo." },
+      { "name": "Root Canal Treatment", "slug": "/root-canal-treatment", "purpose": "Reassure a pain-driven visitor like Rakib, state an honest price range, drive an immediate call.", "primary_keyword": "root canal treatment Rajshahi", "nav_placement": "primary", "priority": "core", "feeds_from": ["keyword_research.page_keyword_map", "personas.Rakib", "competitor_research.synthesis.differentiation_opportunities"], "notes": "Sits under 'Services' dropdown." },
+      { "name": "Dental Implants", "slug": "/dental-implants", "purpose": "Build confidence in Dr. Suma's implant expertise with proof and clear pricing.", "primary_keyword": "dental implant Rajshahi", "nav_placement": "primary", "priority": "core", "feeds_from": ["keyword_research.page_keyword_map", "personas.Nusrat", "competitor_research.synthesis.differentiation_opportunities"], "notes": "Sits under 'Services' dropdown." },
+      { "name": "Clear Aligners & Diastema Closure", "slug": "/clear-aligners-diastema-closure", "purpose": "Resolve Nusrat's treatment-choice confusion and convert quiet researchers.", "primary_keyword": "clear aligner Rajshahi", "nav_placement": "primary", "priority": "core", "feeds_from": ["keyword_research.page_keyword_map", "personas.Nusrat", "market_context.content_angles"], "notes": "Bundles aligners + diastema closure onto one page." },
+      { "name": "Pricing / Cost Guide", "slug": "/pricing", "purpose": "Remove the biggest shared objection (hidden costs) with honest ranges.", "primary_keyword": "root canal treatment cost in Bangladesh", "nav_placement": "primary", "priority": "core", "feeds_from": ["competitor_research.synthesis.differentiation_opportunities", "personas.Rakib.objections", "personas.Nusrat.objections"], "notes": "Clearest differentiation opportunity found." },
+      { "name": "Doctors & About", "slug": "/doctors", "purpose": "Tie each doctor's training directly to treatments and make BMDC verification effortless.", "primary_keyword": "BMDC registered dentist Rajshahi", "nav_placement": "primary", "priority": "supporting", "feeds_from": ["keyword_research.page_keyword_map", "competitor_research.synthesis.differentiation_opportunities", "market_context.trust_factors"], "notes": "Combines both doctor bios plus hygiene section on one page." },
+      { "name": "FAQ", "slug": "/faq", "purpose": "Capture long-tail informational searches and pre-answer objections.", "primary_keyword": "gap teeth treatment options", "nav_placement": "primary", "priority": "supporting", "feeds_from": ["keyword_research.people_also_ask", "keyword_research.long_tail_keywords"], "notes": "10+ questions justify its own page." },
+      { "name": "Contact / Book Appointment", "slug": "/contact", "purpose": "Give every visitor one obvious final step: call, get directions, or submit a request.", "primary_keyword": null, "nav_placement": "both", "priority": "core", "feeds_from": ["primary_goal", "competitor_research.synthesis.recommended_sections"], "notes": "Nav CTA destination; final step of the user journey." },
+      { "name": "Privacy Policy", "slug": "/privacy-policy", "purpose": "Meet basic legal/trust expectations for a site collecting contact-form data.", "primary_keyword": null, "nav_placement": "footer", "priority": "supplementary", "feeds_from": ["Standard pages every site needs"], "notes": "Legal requirement." },
+      { "name": "Thank You", "slug": "/thank-you", "purpose": "Confirm a submitted appointment request and set expectations.", "primary_keyword": null, "nav_placement": "none", "priority": "supplementary", "feeds_from": ["Standard pages every site needs"], "notes": "Reached only after Contact form submission." }
+    ],
+    "navigation": {
+      "primary_nav": ["Services (dropdown: Root Canal Treatment | Dental Implants | Clear Aligners & Diastema Closure)", "Pricing", "Doctors", "FAQ"],
+      "footer_nav": ["Root Canal Treatment", "Dental Implants", "Clear Aligners & Diastema Closure", "Pricing", "Doctors", "FAQ", "Contact", "Privacy Policy"],
+      "cta_button": { "text": "Book Appointment", "links_to": "/contact" }
+    },
+    "primary_user_journey": [
+      "Home — see the clinic name, phone number, hours, and identify which treatment applies",
+      "Service Page (Root Canal, Implants, or Clear Aligners & Diastema Closure) — get treatment-specific reassurance",
+      "Pricing — check the honest cost range before committing further",
+      "Doctors — verify BMDC registration and specific credentials if still uncertain",
+      "Contact — call or submit an appointment request"
+    ],
+    "page_vs_section_decisions": [
+      { "item": "Before/after photo gallery", "decision": "section", "reason": "Supports Implants and Aligners/Diastema pages directly; no independent keyword." },
+      { "item": "Hygiene & sterilization standards", "decision": "section", "reason": "Brief trust content that belongs on Doctors page and Home." },
+      { "item": "BMDC verification explainer", "decision": "section", "reason": "Short, single-purpose content within the Doctors page." },
+      { "item": "Testimonials", "decision": "section", "reason": "Trust signal on Home and service pages, not a direct-navigation destination." },
+      { "item": "Pricing", "decision": "page", "reason": "High standalone search intent and clearest differentiation opportunity." },
+      { "item": "Doctors", "decision": "page", "reason": "Navigated to independently to verify credentials." },
+      { "item": "FAQ", "decision": "page", "reason": "10 PAA questions plus long-tail terms exceed the 'section if short' threshold." },
+      { "item": "Individual doctor sub-pages", "decision": "section (within /doctors)", "reason": "Only two doctors — separate URLs would fragment content without distinct name-keyword justification." }
+    ],
+    "structural_notes": "The sitemap mirrors the 7-page structure implied by Step 4's page_keyword_map. Three service pages are grouped under a single 'Services' nav dropdown to stay within the 6-item limit. Pricing and Doctors carry the most competitive weight since competitor research showed both are done weakly or not at all across the market. Contact has no SEO keyword target — its only job is conversion."
+  },
+
+  "page_blueprints": [
+    {
+      "page_name": "Home",
+      "slug": "/",
+      "page_goal": "Get every visitor — whether in pain or quietly researching — to identify their need within seconds and move toward a call or booking.",
+      "primary_keyword": "dentist near me Rajshahi",
+      "blueprint_depth": "full",
+      "page_cta_strategy": "Primary CTA 'Book Appointment' repeats in the hero, after the pricing teaser, and in the final section. A secondary 'Call Now' CTA sits alongside it in the hero specifically for urgent visitors like Rakib — this dual-path hero is itself a differentiation move, since no competitor splits their CTA by urgency.",
+      "sections": [
+        {
+          "name": "Hero",
+          "order": 1,
+          "purpose": "Confirm within 5 seconds who this clinic serves and give both an urgent and a considered visitor an obvious next step.",
+          "content_notes": "Headline should center the gentle-care + specific-expertise positioning from value_proposition_draft — not a generic 'welcome to our clinic' line. Subheadline should mention both specialties (root canal & aesthetic restoration; implants, aligners, diastema closure) so both personas immediately see themselves. Include the address area (Bospara, Talaimari Road) and current opening status/hours snippet. Two CTAs: primary 'Book Appointment' and secondary 'Call Now' with the phone number visible as text, not just a button.",
+          "keyword_targets": ["dentist near me Rajshahi", "modern dentistry gentle care"],
+          "persona_need": "Addresses Rakib's decision trigger ('seeing the clinic is open right now... with a phone number he can call immediately') and Nusrat's goal ('understand which treatment fits her situation')",
+          "differentiation_note": "No competitor splits their hero CTA by urgency. Make 'Call Now' visually distinct from 'Book Appointment' — e.g., a phone icon and the actual number — so a visitor in pain doesn't have to think before acting.",
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Book Appointment", "destination_slug": "/contact" }
+        },
+        {
+          "name": "Trust & Credentials Bar",
+          "order": 2,
+          "purpose": "Deliver a fast credibility signal before the visitor scrolls away or bounces to a competitor.",
+          "content_notes": "Compact single-line/row bar: both doctors' BMDC registration numbers (17155, 17322) with a short 'verify with BMDC' mention, 'Two specialist oral & dental surgeons', and 'Sat–Thu 10AM–10PM' hours. Keep it visual and scannable — icons or short labels, not paragraphs.",
+          "keyword_targets": ["BMDC registered dentist Rajshahi"],
+          "persona_need": "Addresses Rakib's objection ('how do I know this clinic isn't just a general practice') and Nusrat's trust builder (BMDC registration clearly listed)",
+          "differentiation_note": "RajSpDc and most competitors bury or omit BMDC numbers entirely. Putting both numbers this high on the homepage, with an explicit invitation to verify, is currently unmatched by any Rajshahi competitor.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Two-Path Problem Statement",
+          "order": 3,
+          "purpose": "Make each persona feel immediately understood by naming their specific situation before presenting the solution.",
+          "content_notes": "Split into two short blocks side by side or stacked: one addressing sudden tooth pain/fear ('In pain right now?'), one addressing self-consciousness about a gap or missing tooth ('Thinking about your smile?'). Each block ends with a link to the relevant service page(s). Keep each block to 2–3 sentences — this is a routing section, not an explainer.",
+          "keyword_targets": [],
+          "persona_need": "Directly names Rakib's pain point (fear + urgency) and Nusrat's pain point (self-consciousness, confusion about which treatment) in their own terms",
+          "differentiation_note": "No competitor site explicitly splits its homepage messaging by patient urgency type — every competitor uses one generic tone for all visitors.",
+          "cta": { "has_cta": true, "type": "micro", "text_suggestion": "See Root Canal Treatment →", "destination_slug": "/root-canal-treatment" }
+        },
+        {
+          "name": "Services Overview",
+          "order": 4,
+          "purpose": "Give a scannable overview of the three core treatment areas, each linking to its dedicated page.",
+          "content_notes": "Three cards: Root Canal Treatment, Dental Implants, Clear Aligners & Diastema Closure. Each card: one-line benefit (not a feature list), and which doctor performs it. Avoid generic descriptions like competitors' 'we provide the best care' — name the specific outcome (e.g., 'save a painful tooth without losing it').",
+          "keyword_targets": ["root canal treatment Rajshahi", "dental implant Rajshahi", "clear aligner Rajshahi"],
+          "persona_need": "Addresses both personas' goal of understanding treatment options before visiting",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "micro", "text_suggestion": "Learn more", "destination_slug": "varies per card" }
+        },
+        {
+          "name": "Meet Your Doctors",
+          "order": 5,
+          "purpose": "Briefly introduce both doctors and their distinct specializations, linking to the full Doctors page.",
+          "content_notes": "Two short profile cards (photo placeholder, name, one-line specialization, BDS/BMDC line). Explicitly tie each doctor to their treatment area — Dr. Fahim to root canal/aesthetic restoration, Dr. Suma to implants/aligners/diastema closure. Keep bios to 2 sentences each; full depth belongs on /doctors.",
+          "keyword_targets": ["BMDC registered dentist Rajshahi"],
+          "persona_need": "Addresses both personas' trust builder — a named doctor whose training explicitly matches their specific need, not generic dentistry",
+          "differentiation_note": "Competitor research showed only Dental Artistry and BSDH tie named credentials to specific treatments well, and neither is Rajshahi-based — doing this on the homepage itself, not buried in an About page, is an opportunity.",
+          "cta": { "has_cta": true, "type": "micro", "text_suggestion": "Meet the doctors →", "destination_slug": "/doctors" }
+        },
+        {
+          "name": "Hygiene & Safety Snapshot",
+          "order": 6,
+          "purpose": "Show, not just claim, that the clinic meets the sterilization standard Bangladeshi patients specifically look for.",
+          "content_notes": "Short section (2–3 sentences) plus a photo of sterilization equipment or the clean treatment room. Reference autoclave sterilization explicitly rather than a vague 'modern and clean' claim.",
+          "keyword_targets": ["sterilization standards dental clinic Bangladesh"],
+          "persona_need": "Addresses Rakib's trust builder (photos of a clean, modern clinic with visible sterilization equipment)",
+          "differentiation_note": "No competitor explicitly showcases sterilization equipment despite market_context confirming this is an actively checked trust factor — a real, visual gap to fill.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Honest Pricing Teaser",
+          "order": 7,
+          "purpose": "Signal upfront that pricing is transparent here, without dumping the full price table on the homepage.",
+          "content_notes": "A short line stating starting prices for root canal and implant consultation, with a clear link to the full Pricing page. Frame it as reassurance ('no surprises, no hidden fees') rather than a sales pitch.",
+          "keyword_targets": ["root canal treatment cost in Bangladesh"],
+          "persona_need": "Addresses the #1 shared objection from both personas — fear of hidden costs",
+          "differentiation_note": "No competitor previews pricing anywhere near their homepage; even Tech Dental buries it on a separate dense page. A short, warm pricing teaser this early in the journey is unmatched.",
+          "cta": { "has_cta": true, "type": "secondary", "text_suggestion": "See full pricing →", "destination_slug": "/pricing" }
+        },
+        {
+          "name": "Real Patient Testimonials",
+          "order": 8,
+          "purpose": "Build final-stretch credibility with specific, believable proof before the closing CTA.",
+          "content_notes": "2–3 testimonials, each naming the actual treatment received and a specific outcome or detail (e.g., 'came in with severe pain from a molar, root canal done in two visits, no pain afterward') rather than generic praise. Include first name and neighborhood/area if possible for local authenticity.",
+          "keyword_targets": [],
+          "persona_need": "Addresses both personas' trust builders around real proof of quality",
+          "differentiation_note": "Every competitor's testimonials are either too thin (RajSpDc), fake/placeholder (Dental Artistry), or absent (Tech Dental). Genuinely specific, real testimonials are the lowest bar in the market to clear convincingly — do not settle for generic one-liners here.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Final CTA with Reassurance",
+          "order": 9,
+          "purpose": "Close with the primary action, restated with low-friction reassurance for whichever persona is still hesitant.",
+          "content_notes": "Repeat both CTAs (Call Now / Book Appointment). Add one reassurance line addressing the most common final hesitation — e.g., 'Consultation and clear pricing before any treatment begins.'",
+          "keyword_targets": [],
+          "persona_need": "Addresses both personas' shared objection around uncertainty/cost before committing",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Book Appointment", "destination_slug": "/contact" }
+        }
+      ]
+    },
+    {
+      "page_name": "Root Canal Treatment",
+      "slug": "/root-canal-treatment",
+      "page_goal": "Get a pain-driven visitor to call the clinic today.",
+      "primary_keyword": "root canal treatment Rajshahi",
+      "blueprint_depth": "full",
+      "page_cta_strategy": "Primary CTA is 'Call Now for Today's Availability' — appears in the hero, after the pricing section, and in the final section. This urgency-specific wording is deliberately different from the generic 'Book Appointment' used elsewhere, since Rakib's persona needs speed, not a form.",
+      "sections": [
+        {
+          "name": "Hero",
+          "order": 1,
+          "purpose": "Immediately confirm this page addresses tooth pain specifically and offer the fastest possible path to relief.",
+          "content_notes": "Headline should name the pain directly (e.g., referencing sharp tooth pain or infection) rather than a clinical 'Root Canal Treatment' label alone. Subheadline reassures on the pain-fear objection in one line. Primary CTA: 'Call Now for Today's Availability' with the phone number visible as text.",
+          "keyword_targets": ["root canal treatment Rajshahi", "emergency dentist Rajshahi"],
+          "persona_need": "Addresses Rakib's context directly — sharp, sudden pain and urgency",
+          "differentiation_note": "No competitor uses urgency-specific CTA wording tied to same-day availability. State 'today's availability' explicitly if hours allow (Sat–Thu 10AM–10PM) rather than a generic 'book now'.",
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Call Now for Today's Availability", "destination_slug": "tel:01773597365" }
+        },
+        {
+          "name": "What Root Canal Treatment Involves",
+          "order": 2,
+          "purpose": "Give a plain-language explanation of the procedure so an anxious visitor understands what's about to happen.",
+          "content_notes": "Explain in accessible, non-clinical language what root canal treatment does (saves an infected tooth rather than extracting it) and why it's usually the better option, drawing on the root-canal-vs-extraction research from market_context. Avoid dense medical jargon.",
+          "keyword_targets": ["root canal vs tooth extraction which is better"],
+          "persona_need": "Addresses Rakib's uncertainty and gives him language to understand his own situation",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Does It Actually Hurt?",
+          "order": 3,
+          "purpose": "Directly defuse the single most common fear about this procedure before it can cause hesitation.",
+          "content_notes": "Address the pain-fear objection head-on and honestly — describe that modern anesthesia makes the procedure itself largely painless, and be honest about mild post-procedure soreness rather than over-promising zero discomfort. This should read as reassuring, not dismissive of the fear.",
+          "keyword_targets": ["does a root canal hurt Bangladesh"],
+          "persona_need": "Addresses Rakib's objection directly: 'What if it hurts as much as everyone online says root canals hurt?'",
+          "differentiation_note": "This is the single most-documented fear from Step 3 research, yet no Rajshahi competitor addresses it directly on a service page. Give this section its own clear heading rather than folding it into general copy.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Meet Dr. Fahim",
+          "order": 4,
+          "purpose": "Tie the treatment directly to the specific doctor's named training, not generic clinic credibility.",
+          "content_notes": "Short profile block: Dr. Md. Fahim Faisal, BDS (RMU), BMDC Reg 17155, specially trained in root canal treatment and aesthetic tooth restoration. Explicitly state this is his area of specialized training, not general dentistry. Link to full profile on /doctors.",
+          "keyword_targets": ["Dr. Md. Fahim Faisal BDS RMU"],
+          "persona_need": "Addresses Rakib's objection: 'How do I know this clinic isn't just a general practice slapping root canal specialist on their sign?'",
+          "differentiation_note": "Matches the differentiation opportunity of tying named credentials directly to the specific treatment on its own service page — something even Dental Artistry only does on a general About page.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "What to Expect, Visit by Visit",
+          "order": 5,
+          "purpose": "Remove 'what happens next' anxiety by laying out the process in simple steps.",
+          "content_notes": "3–4 step process: initial exam/X-ray, cleaning and disinfecting the canal, filling and sealing, crown placement if needed. Note how many visits this typically takes, addressing the 'how many visits does a root canal take' PAA question.",
+          "keyword_targets": ["how long does root canal treatment take", "how many visits does a root canal take"],
+          "persona_need": "Addresses Rakib's goal of knowing what he's walking into",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Honest Price Range",
+          "order": 6,
+          "purpose": "State a real price range for root canal treatment on this page directly, not just link away.",
+          "content_notes": "Give a specific BDT range for root canal treatment, and explicitly note whether the crown is included or a separate cost — directly resolving Rakib's exact objection about the price 'ballooning' later. Link to the full Pricing page for other treatments.",
+          "keyword_targets": ["root canal cost Rajshahi", "root canal treatment cost in Bangladesh"],
+          "persona_need": "Addresses Rakib's objection: 'What if the quoted price doesn't include the crown afterward and I get hit with a bigger bill?'",
+          "differentiation_note": "Naming whether the crown is included/excluded, right here on the service page, is the exact honesty gap that separates DentalArena from every competitor except Tech Dental — and Tech Dental doesn't have this warmth or doctor context around it.",
+          "cta": { "has_cta": true, "type": "secondary", "text_suggestion": "See full pricing guide →", "destination_slug": "/pricing" }
+        },
+        {
+          "name": "FAQs",
+          "order": 7,
+          "purpose": "Catch any remaining objection before the final CTA.",
+          "content_notes": "3–4 questions specific to root canal: Does insurance/EMI apply? What if I need an extraction instead? How soon can I be seen? What if the pain gets worse before my appointment?",
+          "keyword_targets": ["root canal same day appointment Rajshahi"],
+          "persona_need": "Catches any lingering objection from Rakib before he calls",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Final CTA",
+          "order": 8,
+          "purpose": "Close with the single, urgent action this page exists to drive.",
+          "content_notes": "Restate 'Call Now for Today's Availability' with the phone number and a one-line reassurance ('Gentle treatment, honest pricing, seen quickly').",
+          "keyword_targets": [],
+          "persona_need": "Directly matches Rakib's decision trigger",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Call Now for Today's Availability", "destination_slug": "tel:01773597365" }
+        }
+      ]
+    },
+    {
+      "page_name": "Dental Implants",
+      "slug": "/dental-implants",
+      "page_goal": "Get a considered, research-driven visitor like Nusrat to book a consultation.",
+      "primary_keyword": "dental implant Rajshahi",
+      "blueprint_depth": "full",
+      "page_cta_strategy": "Primary CTA is 'Book a Consultation' — appears in the hero, after the before/after proof section, and in the final section. Secondary CTA in the hero is 'See Pricing' for visitors who want cost information before committing to any contact.",
+      "sections": [
+        {
+          "name": "Hero",
+          "order": 1,
+          "purpose": "Confirm this page addresses missing or damaged teeth restoration and set a calm, considered tone (not urgent).",
+          "content_notes": "Headline focused on restoring a natural, confident smile rather than clinical implant terminology alone. Primary CTA 'Book a Consultation', secondary 'See Pricing'.",
+          "keyword_targets": ["dental implant Rajshahi"],
+          "persona_need": "Addresses Nusrat's goal of understanding the treatment before committing further",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Book a Consultation", "destination_slug": "/contact" }
+        },
+        {
+          "name": "What a Dental Implant Involves",
+          "order": 2,
+          "purpose": "Give a clear, non-overwhelming explanation of what an implant is and why it's used.",
+          "content_notes": "Explain simply: a titanium root replacement topped with a custom crown, used to replace a missing tooth permanently. Avoid dense clinical detail — this is orientation, not a procedure manual.",
+          "keyword_targets": [],
+          "persona_need": "Addresses Nusrat's confusion about whether she needs an implant, bridge, or aligner",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Who Implants Are For",
+          "order": 3,
+          "purpose": "Help the visitor self-qualify — confirm whether an implant is actually the right fit for their situation.",
+          "content_notes": "Short qualifier list: missing one or more teeth, a tooth beyond saving, wanting a permanent (non-removable) solution. This helps a visitor like Nusrat feel specifically addressed rather than reading generic service copy.",
+          "keyword_targets": [],
+          "persona_need": "Addresses Nusrat's goal of understanding which treatment fits her specific situation",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Meet Dr. Suma",
+          "order": 4,
+          "purpose": "Tie implant expertise directly to Dr. Suma's specific, named training.",
+          "content_notes": "Short profile block: Dr. Hasna Akter Suma, BDS (RMU), BMDC Reg 17322, specially trained in implants. State this explicitly as specialized training, not general dentistry. Link to full profile on /doctors.",
+          "keyword_targets": ["Dr. Hasna Akter Suma BDS RMU", "female dentist Rajshahi implants"],
+          "persona_need": "Addresses Nusrat's objection: 'How do I know this dentist has actually done many of these, not just a few?'",
+          "differentiation_note": "Ties named, specific credentials directly to this exact treatment page — the differentiation opportunity identified from Dental Artistry's strongest section, done locally in Rajshahi.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Before & After Results",
+          "order": 5,
+          "purpose": "Give visual proof of real outcomes rather than asking the visitor to take credentials on faith alone.",
+          "content_notes": "2–4 before/after photo pairs of implant cases (with patient consent), each with a one-line caption of the situation addressed. If photos aren't yet available at launch, note this section explicitly as a placeholder to fill before go-live rather than skipping it silently.",
+          "keyword_targets": ["before after implant photos"],
+          "persona_need": "Addresses Nusrat's objection: 'What if I spend all this money and the result doesn't look natural?'",
+          "differentiation_note": "No competitor in Step 5 research shows real before/after proof despite it being a documented trust builder — this is one of the clearest, most visual differentiation opportunities on the entire site.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "The Implant Process, Step by Step",
+          "order": 6,
+          "purpose": "Remove uncertainty about the timeline and what's involved from consultation to final result.",
+          "content_notes": "4-step process: consultation & imaging, implant placement, healing period, crown placement. Give a realistic overall timeframe so Nusrat can plan around it.",
+          "keyword_targets": [],
+          "persona_need": "Addresses Nusrat's goal of getting a realistic sense of the timeline before committing",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Honest Price Range",
+          "order": 7,
+          "purpose": "State a real price range for implants on this page directly.",
+          "content_notes": "Give a specific BDT starting range for a single-tooth implant, noting what's included (fixture, abutment, crown) versus what may cost extra (X-rays, bone grafting if needed). Link to the full Pricing page.",
+          "keyword_targets": ["dental implant cost Bangladesh BDT", "dental implant price Rajshahi"],
+          "persona_need": "Addresses Nusrat's goal of getting a realistic sense of cost before committing",
+          "differentiation_note": "Matches the site-wide pricing transparency differentiation — most competitors, including the credentialed Dental Artistry, hide implant pricing entirely.",
+          "cta": { "has_cta": true, "type": "secondary", "text_suggestion": "See full pricing guide →", "destination_slug": "/pricing" }
+        },
+        {
+          "name": "FAQs",
+          "order": 8,
+          "purpose": "Catch remaining objections, including the Dhaka-comparison objection, before the final CTA.",
+          "content_notes": "4–5 questions: Is it painful? How long do implants last? Why choose local treatment over travelling to Dhaka? What if I need a bone graft? Explicitly address the Dhaka question, positioning local treatment as equally credentialed and more convenient for follow-up care.",
+          "keyword_targets": [],
+          "persona_need": "Addresses Nusrat's objection: 'Is this something I could get done more affordably or reliably in Dhaka instead of locally?'",
+          "differentiation_note": "No Rajshahi competitor makes the local-vs-Dhaka comparison directly — addressing it explicitly here turns a real objection into a strength (easier follow-up visits, same specialist throughout).",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Final CTA",
+          "order": 9,
+          "purpose": "Close with a low-commitment next step appropriate for a considered decision.",
+          "content_notes": "Restate 'Book a Consultation' with reassurance that a consultation doesn't commit her to treatment — she can ask questions first, matching her decision trigger from the persona research.",
+          "keyword_targets": [],
+          "persona_need": "Matches Nusrat's decision trigger: 'a simple way to book a consultation without commitment'",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Book a Consultation", "destination_slug": "/contact" }
+        }
+      ]
+    },
+    {
+      "page_name": "Clear Aligners & Diastema Closure",
+      "slug": "/clear-aligners-diastema-closure",
+      "page_goal": "Resolve Nusrat's treatment-choice confusion and get her to book a consultation.",
+      "primary_keyword": "clear aligner Rajshahi",
+      "blueprint_depth": "full",
+      "page_cta_strategy": "Primary CTA is 'Book a Consultation' — appears in the hero, after the before/after section, and in the final section. The comparison section (order 2) is the strategic core of this page and should appear before either treatment is explained in detail.",
+      "sections": [
+        {
+          "name": "Hero",
+          "order": 1,
+          "purpose": "Confirm this page addresses gap teeth and smile alignment, covering two related treatments under one roof.",
+          "content_notes": "Headline should acknowledge that there's more than one way to fix a gap or misaligned smile, setting up the comparison section that follows. Primary CTA 'Book a Consultation'.",
+          "keyword_targets": ["clear aligner Rajshahi", "gap teeth treatment near me"],
+          "persona_need": "Addresses Nusrat's context — self-consciousness about a gap she's been quietly researching",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Book a Consultation", "destination_slug": "/contact" }
+        },
+        {
+          "name": "Which Treatment Is Right for You?",
+          "order": 2,
+          "purpose": "Directly resolve the single biggest point of confusion found in persona research before explaining either treatment individually.",
+          "content_notes": "A simple comparison table or side-by-side block: Clear Aligners (for overall alignment, worn daily, months of treatment) vs. Midline Diastema Closure (targeted gap closure, often faster, more limited scope). Help the visitor self-identify which situation matches theirs. Keep language plain — no orthodontic jargon.",
+          "keyword_targets": ["dental implant vs clear aligner vs diastema closure", "gap teeth treatment options", "clear aligner vs metal braces adults"],
+          "persona_need": "Directly resolves Nusrat's stated confusion: 'confused about whether she needs an implant, a bridge, or if clear aligners could fix it instead'",
+          "differentiation_note": "This is the single clearest, most requested piece of content missing from every competitor site in Step 5 research — none offer a plain-language comparison to help a visitor self-diagnose. This section alone could be the page's biggest conversion driver.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Clear Aligners: What's Included",
+          "order": 3,
+          "purpose": "Explain the clear aligner treatment specifically for visitors who've identified this as their path.",
+          "content_notes": "Cover what the trays are, roughly how long treatment takes, and the daily-wear commitment — set honest expectations rather than overselling convenience.",
+          "keyword_targets": ["clear aligner cost Bangladesh monthly"],
+          "persona_need": "Addresses Nusrat's goal of understanding what the treatment actually involves",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Midline Diastema Closure: What's Included",
+          "order": 4,
+          "purpose": "Explain diastema closure specifically for visitors whose situation is a targeted gap rather than overall misalignment.",
+          "content_notes": "Explain this is a more targeted, often quicker procedure to close a specific gap (e.g., between front teeth) rather than full-mouth alignment.",
+          "keyword_targets": ["midline diastema closure treatment"],
+          "persona_need": "Addresses Nusrat's specific situation (a gap between front teeth) directly",
+          "differentiation_note": "Near-uncontested keyword locally per Step 4 research — worth its own clearly labeled subsection even on a combined page.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Meet Dr. Suma",
+          "order": 5,
+          "purpose": "Tie both treatments directly to Dr. Suma's specific, named training.",
+          "content_notes": "Short profile block reiterating Dr. Suma's specialization in implants, clear aligners, and diastema closure specifically. Link to full profile on /doctors.",
+          "keyword_targets": ["Dr. Hasna Akter Suma BDS RMU"],
+          "persona_need": "Addresses Nusrat's objection about dentist experience with this specific procedure",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Before & After Results",
+          "order": 6,
+          "purpose": "Give visual proof of real diastema closure and aligner outcomes.",
+          "content_notes": "2–4 before/after photo pairs, prioritizing diastema closure cases if available since this is the more visually striking, harder-to-find proof type locally. Note explicitly as a pre-launch content gap if photos aren't yet available.",
+          "keyword_targets": ["before after diastema closure photos"],
+          "persona_need": "Addresses Nusrat's objection about the result not looking natural",
+          "differentiation_note": "No competitor shows real before/after proof for diastema closure specifically — this is a genuinely rare, ownable content asset.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Honest Price Range",
+          "order": 7,
+          "purpose": "State real price ranges for both clear aligners and diastema closure on this page directly.",
+          "content_notes": "Give separate BDT ranges for clear aligners (noting these are typically higher, ongoing treatment) and diastema closure (typically a lower, more contained cost) so the visitor isn't confused by one blended number. Link to the full Pricing page.",
+          "keyword_targets": ["clear aligner cost Bangladesh monthly"],
+          "persona_need": "Addresses Nusrat's goal of getting a realistic sense of cost before committing",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "secondary", "text_suggestion": "See full pricing guide →", "destination_slug": "/pricing" }
+        },
+        {
+          "name": "FAQs",
+          "order": 8,
+          "purpose": "Catch remaining objections before the final CTA.",
+          "content_notes": "3–4 questions: How long does treatment take? Is it removable/reversible? Will it look natural? Can this be combined with other treatments?",
+          "keyword_targets": [],
+          "persona_need": "Catches Nusrat's remaining hesitations",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Final CTA",
+          "order": 9,
+          "purpose": "Close with a low-commitment next step.",
+          "content_notes": "Restate 'Book a Consultation' with reassurance that the consultation itself will clarify which treatment fits her case — this directly closes the loop from the comparison section at the top of the page.",
+          "keyword_targets": [],
+          "persona_need": "Matches Nusrat's decision trigger for a no-commitment way to get her questions answered",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Book a Consultation", "destination_slug": "/contact" }
+        }
+      ]
+    },
+    {
+      "page_name": "Pricing / Cost Guide",
+      "slug": "/pricing",
+      "page_goal": "Remove the cost-uncertainty objection for both personas and move them toward booking with confidence.",
+      "primary_keyword": "root canal treatment cost in Bangladesh",
+      "blueprint_depth": "full",
+      "page_cta_strategy": "Primary CTA is 'Book a Free Consultation for Your Exact Quote' in the final section, framed as zero-risk since prices shown are ranges, not final quotes. A secondary CTA links back to the relevant service page for anyone who arrived here first.",
+      "sections": [
+        {
+          "name": "Page Header",
+          "order": 1,
+          "purpose": "Frame the page as an act of honesty and trust, not just a bare price list.",
+          "content_notes": "One or two sentences explaining why DentalArena publishes real prices upfront — framed around the gentle-care, no-surprises positioning, not a sales pitch. Avoid a bare 'Pricing' label with no context.",
+          "keyword_targets": ["root canal treatment cost in Bangladesh"],
+          "persona_need": "Sets the tone that directly answers both personas' shared cost-transparency objection",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Treatment Price Table",
+          "order": 2,
+          "purpose": "Show real, specific BDT price ranges for every core treatment in one scannable place.",
+          "content_notes": "Table or card list covering: Consultation fee, Root Canal Treatment, Dental Implant (single tooth), Clear Aligners, Midline Diastema Closure, Aesthetic Tooth Restoration. Use honest ranges rather than single numbers where cost genuinely varies by case complexity. This is the most important content asset on the entire site per competitor research — do not understate it or bury it below the fold.",
+          "keyword_targets": ["dental implant cost Bangladesh BDT", "clear aligner cost Bangladesh monthly", "consultation fee"],
+          "persona_need": "Directly resolves Rakib's objection about the price ballooning and Nusrat's goal of a realistic cost sense",
+          "differentiation_note": "The single clearest differentiation opportunity in the entire market per Step 5 — only Tech Dental publishes real numbers, and it does so without any doctor warmth or credibility context. This table, paired with the rest of the site's tone, should be the thing that makes DentalArena stand out most.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "What's NOT Included",
+          "order": 3,
+          "purpose": "Build trust through radical honesty about what can add to the final cost.",
+          "content_notes": "Plainly list common extras that may not be in the base price: crown after root canal, X-rays/imaging, bone grafting for implants if needed, retainers after aligner treatment. This should read as protective honesty, not a list of upsells.",
+          "keyword_targets": [],
+          "persona_need": "Directly resolves Rakib's exact fear: 'What if the quoted price doesn't include the crown afterward and I get hit with a bigger bill?'",
+          "differentiation_note": "No competitor — not even Tech Dental — explicitly frames a 'what's not included' section this directly. This is a small section with outsized trust impact.",
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "FAQs About Cost",
+          "order": 4,
+          "purpose": "Catch remaining cost-related questions before the final CTA.",
+          "content_notes": "3–4 questions: Is there a payment/installment option? Why do implant prices vary so much? Is the consultation fee applied toward treatment? Do prices differ between the two doctors?",
+          "keyword_targets": [],
+          "persona_need": "Catches remaining cost objections from both personas",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Final CTA",
+          "order": 5,
+          "purpose": "Convert a now-informed, price-confident visitor into a booking.",
+          "content_notes": "Frame the CTA around getting an exact, personalized quote via a free or low-cost consultation — zero-risk framing, since the visitor has already seen the ranges and isn't walking in blind.",
+          "keyword_targets": [],
+          "persona_need": "Moves both personas from cost-informed to booking-ready",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Book a Free Consultation for Your Exact Quote", "destination_slug": "/contact" }
+        }
+      ]
+    },
+    {
+      "page_name": "Doctors & About",
+      "slug": "/doctors",
+      "page_goal": "Convert credential-checking visitors into confident bookers.",
+      "primary_keyword": "BMDC registered dentist Rajshahi",
+      "blueprint_depth": "light",
+      "sections": [
+        { "name": "Opening Statement", "order": 1, "purpose": "One-line framing of the clinic's two-specialist model." },
+        { "name": "Dr. Md. Fahim Faisal — Profile", "order": 2, "purpose": "Full credentials, BMDC Reg 17155, root canal & aesthetic restoration specialization, phone, availability (Sat–Thu 10AM–10PM, Fri by appointment)." },
+        { "name": "Dr. Hasna Akter Suma — Profile", "order": 3, "purpose": "Full credentials, BMDC Reg 17322, implant/clear aligner/diastema closure specialization, phone." },
+        { "name": "Hygiene & Sterilization Standards", "order": 4, "purpose": "Expanded version of the homepage snapshot — autoclave sterilization, clean facility, photo." },
+        { "name": "How to Verify BMDC Registration", "order": 5, "purpose": "Short explainer on texting the registration number to 16321, turning the local trust ritual into content." },
+        { "name": "CTA — Book with Either Doctor", "order": 6, "purpose": "Route to Contact page, or directly to calling the relevant doctor's number." }
+      ]
+    },
+    {
+      "page_name": "FAQ",
+      "slug": "/faq",
+      "page_goal": "Pre-answer remaining objections and capture long-tail informational search traffic.",
+      "primary_keyword": "gap teeth treatment options",
+      "blueprint_depth": "light",
+      "sections": [
+        { "name": "Page Header", "order": 1, "purpose": "Simple, welcoming framing — not a wall of text." },
+        { "name": "Root Canal & Pain Questions", "order": 2, "purpose": "Does it hurt, how many visits, root canal vs extraction." },
+        { "name": "Implants & Aligners Questions", "order": 3, "purpose": "Cost, timeline, natural look, which treatment fits gap teeth." },
+        { "name": "Cost & Booking Questions", "order": 4, "purpose": "Consultation fee, payment options, how to book." },
+        { "name": "Credentials & Safety Questions", "order": 5, "purpose": "BMDC verification, sterilization standards." }
+      ]
+    },
+    {
+      "page_name": "Contact / Book Appointment",
+      "slug": "/contact",
+      "page_goal": "Convert every visitor, regardless of entry point, into a call or submitted appointment request.",
+      "primary_keyword": null,
+      "blueprint_depth": "full",
+      "page_cta_strategy": "Primary CTA is the appointment form submission ('Send My Appointment Request'), with equally prominent 'Call Dr. Fahim' and 'Call Dr. Suma' options for visitors who prefer phone — this dual-doctor routing is itself the page's key differentiation move.",
+      "sections": [
+        {
+          "name": "Header",
+          "order": 1,
+          "purpose": "Set a warm, low-friction tone for the final step in the journey.",
+          "content_notes": "Welcoming framing, e.g. 'Let's get you seen' rather than a bare 'Contact Us' label.",
+          "keyword_targets": [],
+          "persona_need": "Reduces friction for both personas at the final conversion step",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "What to Expect After You Reach Out",
+          "order": 2,
+          "purpose": "Remove uncertainty about what happens after submitting a request or calling.",
+          "content_notes": "Short line: e.g. 'Call during clinic hours for the fastest response, or submit the form below and we'll call you back to confirm your appointment.'",
+          "keyword_targets": [],
+          "persona_need": "Addresses Rakib's need for speed and Nusrat's comfort with a lower-pressure form option",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Call the Right Doctor Directly",
+          "order": 3,
+          "purpose": "Route visitors to the specific doctor whose specialization matches their need, rather than one generic clinic number.",
+          "content_notes": "Two clear call-to-action blocks: 'For tooth pain or root canal — Call Dr. Fahim: 01627-525270' and 'For implants, aligners, or diastema closure — Call Dr. Suma: 01946-164121'. Also list the general clinic appointment number (01773-597365) for anyone unsure.",
+          "keyword_targets": [],
+          "persona_need": "Directly matches both personas' need to reach the specifically relevant specialist without confusion",
+          "differentiation_note": "No competitor routes by specialty — every competitor lists one generic clinic number. This split, treatment-specific routing is a genuinely unique structural choice for this market.",
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Call Dr. Fahim / Call Dr. Suma", "destination_slug": "tel: (respective numbers)" }
+        },
+        {
+          "name": "Appointment Request Form",
+          "order": 4,
+          "purpose": "Give a lower-friction alternative to calling for visitors who prefer it.",
+          "content_notes": "Keep to 3–4 fields max: name, phone, preferred treatment/doctor (dropdown), brief message. Matches Dental Artistry's best-practice appointment form from Step 5, but should be simpler and faster to complete.",
+          "keyword_targets": [],
+          "persona_need": "Matches Nusrat's high tech-comfort preference for a form over a phone call",
+          "differentiation_note": null,
+          "cta": { "has_cta": true, "type": "primary", "text_suggestion": "Send My Appointment Request", "destination_slug": "/thank-you" }
+        },
+        {
+          "name": "Location, Hours & Map",
+          "order": 5,
+          "purpose": "Give practical, complete location information for anyone ready to visit.",
+          "content_notes": "Full address (76, Bospara, Bazar–Talaimari Road, Rajshahi, near Shah Makhdoom College), embedded map, and full hours (Sat–Thu 10AM–10PM, Friday by appointment only).",
+          "keyword_targets": ["dental clinic opening hours Friday appointment Rajshahi"],
+          "persona_need": "Addresses practical logistics for both personas",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        },
+        {
+          "name": "Quick FAQ",
+          "order": 6,
+          "purpose": "Answer 2–3 final pre-contact questions.",
+          "content_notes": "E.g., 'Do I need to call ahead for Friday?', 'Is there parking nearby?', 'What should I bring to my first visit?'",
+          "keyword_targets": [],
+          "persona_need": "Catches last-mile hesitation",
+          "differentiation_note": null,
+          "cta": { "has_cta": false }
+        }
+      ]
+    },
+    {
+      "page_name": "Privacy Policy",
+      "slug": "/privacy-policy",
+      "page_goal": "Meet legal/trust expectations without distracting from conversion pages.",
+      "primary_keyword": null,
+      "blueprint_depth": "light",
+      "sections": [
+        { "name": "Header", "order": 1, "purpose": "Simple statement of intent." },
+        { "name": "What We Collect & Why", "order": 2, "purpose": "Cover contact-form data collection (name, phone, message)." },
+        { "name": "How to Contact Us About Your Data", "order": 3, "purpose": "Provide a contact method for data questions." }
+      ]
+    },
+    {
+      "page_name": "Thank You",
+      "slug": "/thank-you",
+      "page_goal": "Confirm the appointment request and reduce anxiety about next steps.",
+      "primary_keyword": null,
+      "blueprint_depth": "light",
+      "sections": [
+        { "name": "Confirmation Message", "order": 1, "purpose": "Confirm the request was received." },
+        { "name": "What Happens Next", "order": 2, "purpose": "State that the clinic will call back to confirm, and roughly when to expect that call." },
+        { "name": "Alternative: Call Now", "order": 3, "purpose": "Give an immediate call option for anyone who doesn't want to wait for a callback." }
+      ]
+    }
+  ]
+}

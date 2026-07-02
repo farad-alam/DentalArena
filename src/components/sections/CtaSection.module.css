@@ -1,0 +1,37 @@
+.section {
+  padding: var(--spacing-16) 0;
+  background-color: var(--color-primary-light);
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.title {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-8);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.phoneLink {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-top: var(--spacing-6);
+  display: block;
+}

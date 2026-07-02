@@ -1,0 +1,104 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: var(--spacing-16) 0;
+}
+
+.bgSurface {
+  background-color: var(--color-surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.textContent {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.textContent h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-6);
+}
+
+.textContent h3 {
+  color: var(--color-primary);
+  margin-top: var(--spacing-8);
+  margin-bottom: var(--spacing-4);
+}
+
+.textContent p {
+  margin-bottom: var(--spacing-4);
+}
+
+.stepList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.step {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-jakarta);
+  flex-shrink: 0;
+}
+
+.stepContent h4 {
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-primary);
+}
+
+.priceCallout {
+  background-color: var(--color-primary-light);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin: var(--spacing-8) 0;
+}
+
+.priceCallout h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: var(--spacing-2);
+}
+
+.priceValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.priceNote {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-6);
+}
