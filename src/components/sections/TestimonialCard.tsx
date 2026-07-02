@@ -17,6 +17,8 @@ export default function TestimonialCard({
 
   return (
     <div className={styles.card}>
+      <div className={styles.watermark}>"</div>
+      <div className={styles.stars}>★★★★★</div>
       <p className={styles.quote}>"{quote}"</p>
       
       <div className={styles.footer}>

@@ -1,20 +1,44 @@
 .hero {
-  padding: var(--spacing-16) 0 var(--spacing-12);
-  background-color: var(--color-primary-light);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  background-image: url('/images/clinic_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 68, 85, 0.85);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: var(--spacing-16) 0;
+  color: var(--color-white);
+}
+
 .title {
-  color: var(--color-primary);
+  font-size: 3rem;
   margin-bottom: var(--spacing-4);
+  color: var(--color-white);
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  color: var(--color-text-primary);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--spacing-8);
   max-width: 700px;
-  margin: 0 auto var(--spacing-8);
+  margin-inline: auto;
   line-height: 1.6;
 }
 

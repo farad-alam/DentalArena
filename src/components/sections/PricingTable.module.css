@@ -3,8 +3,9 @@
   overflow-x: auto;
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   margin: var(--spacing-8) 0;
+  border: 1px solid rgba(0,0,0,0.03);
 }
 
 .table {
@@ -14,16 +15,29 @@
 }
 
 .table th, .table td {
-  padding: var(--spacing-4) var(--spacing-6);
+  padding: var(--spacing-5) var(--spacing-6);
   text-align: left;
   border-bottom: 1px solid var(--color-surface);
 }
 
 .table th {
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
-  font-weight: 700;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
   font-family: var(--font-jakarta);
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 68, 85, 0.03);
+}
+
+.table tr:nth-child(even) {
+  background-color: #fafafa;
 }
 
 .table tr:last-child td {
@@ -34,6 +48,19 @@
   font-weight: 600;
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-1);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.badge {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  background-color: var(--color-accent-dark);
+  color: var(--color-white);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
 }
 
 .serviceDesc {
@@ -44,7 +71,7 @@
 .price {
   font-weight: 700;
   color: var(--color-primary);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .note {

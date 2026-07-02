@@ -22,31 +22,30 @@ export default function SectionHero({
 }: SectionHeroProps) {
   return (
     <section className={styles.hero}>
-      <div className="container">
+      <div className={styles.overlay}></div>
+      <div className={`container ${styles.content} animate-fade-in-up`}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
         
-        {(primaryCtaText || secondaryCtaText) && (
-          <div className={styles.actions}>
-            {primaryCtaText && primaryCtaLink && (
-              <Link 
-                href={primaryCtaLink} 
-                className={`btn ${primaryCtaUrgent ? 'btn-urgent' : 'btn-primary'}`}
-              >
+        <div className={styles.actions}>
+          {primaryCtaText && primaryCtaLink && (
+            primaryCtaLink.startsWith('tel:') ? (
+              <a href={primaryCtaLink} className={`btn ${primaryCtaUrgent ? 'btn-urgent' : 'btn-primary'}`}>
+                {primaryCtaText}
+              </a>
+            ) : (
+              <Link href={primaryCtaLink} className={`btn ${primaryCtaUrgent ? 'btn-urgent' : 'btn-primary'}`}>
                 {primaryCtaText}
               </Link>
-            )}
-            
-            {secondaryCtaText && secondaryCtaLink && (
-              <Link 
-                href={secondaryCtaLink} 
-                className="btn btn-secondary"
-              >
-                {secondaryCtaText}
-              </Link>
-            )}
-          </div>
-        )}
+            )
+          )}
+          
+          {secondaryCtaText && secondaryCtaLink && (
+            <Link href={secondaryCtaLink} className="btn glass">
+              {secondaryCtaText}
+            </Link>
+          )}
+        </div>
       </div>
     </section>
   );

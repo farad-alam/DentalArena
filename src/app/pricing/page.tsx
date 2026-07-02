@@ -23,14 +23,16 @@ export default function PricingPage() {
       name: "Root Canal Treatment",
       description: "Removal of infected pulp, cleaning, and sealing.",
       priceRange: "BDT 4,000 - 8,000",
-      note: "Crown not included. Varies by tooth (front vs. molar)."
+      note: "Crown not included. Varies by tooth (front vs. molar).",
+      badge: "Most Common"
     },
     {
       id: "implant",
       name: "Dental Implant (Single)",
       description: "Titanium fixture placement.",
       priceRange: "BDT 35,000 - 65,000",
-      note: "Crown included. Varies by implant brand."
+      note: "Crown included. Varies by implant brand.",
+      badge: "Permanent Solution"
     },
     {
       id: "aligners",

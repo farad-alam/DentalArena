@@ -22,7 +22,9 @@ export default function DoctorsPage() {
             {/* Dr. Fahim */}
             <div className={styles.profileCard}>
               <div className={styles.header}>
-                <div className={styles.avatar}>👨‍⚕️</div>
+                <div className={styles.avatar}>
+                  <img src="/images/doctor_male.png" alt="Dr. Md. Fahim Faisal" />
+                </div>
                 <div className={styles.info}>
                   <h2>Dr. Md. Fahim Faisal</h2>
                   <p className={styles.credentials}>BDS (RMU), Oral & Dental Surgeon</p>
@@ -48,7 +50,9 @@ export default function DoctorsPage() {
             {/* Dr. Suma */}
             <div className={styles.profileCard}>
               <div className={styles.header}>
-                <div className={styles.avatar}>👩‍⚕️</div>
+                <div className={styles.avatar}>
+                  <img src="/images/doctor_female.png" alt="Dr. Hasna Akter Suma" />
+                </div>
                 <div className={styles.info}>
                   <h2>Dr. Hasna Akter Suma</h2>
                   <p className={styles.credentials}>BDS (RMU), Oral & Dental Surgeon</p>

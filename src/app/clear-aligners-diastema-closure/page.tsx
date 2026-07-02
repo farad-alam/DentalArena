@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function ClearAlignersPage() {
   const galleryItems = [
-    { id: "1", caption: "Midline Diastema Closure (Gap Fixed)" },
-    { id: "2", caption: "Clear Aligner Result (Alignment)" }
+    { id: "1", caption: "Midline Diastema Closure (Gap Fixed)", beforeImage: "/images/before_smile.png", afterImage: "/images/after_smile.png" },
+    { id: "2", caption: "Clear Aligner Result (Alignment)", beforeImage: "/images/before_smile.png", afterImage: "/images/after_smile.png" }
   ];
 
   const faqs = [

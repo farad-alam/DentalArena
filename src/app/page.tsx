@@ -10,15 +10,18 @@ export default function Home() {
     <div className={styles.main}>
       {/* 1. Hero */}
       <section className={styles.hero}>
-        <div className="container">
-          <h1 className={styles.heroTitle}>Expert Dental Care in Rajshahi — Gentle, Specialized, Honest.</h1>
-          <p className={styles.heroSubtitle}>
-            Modern dentistry specializing in root canal treatment, aesthetic restoration, implants, and clear aligners. 
-            Two dedicated oral & dental surgeons under one roof.
-          </p>
-          <div className={styles.heroActions}>
-            <a href="tel:01773597365" className="btn btn-urgent">📞 Call Now: 01773-597365</a>
-            <Link href="/contact" className="btn btn-primary">Book Appointment</Link>
+        <div className={styles.heroOverlay}></div>
+        <div className={`container ${styles.heroContent}`}>
+          <div className={`glass-dark animate-fade-in-up ${styles.heroCard}`}>
+            <h1 className={styles.heroTitle}>Expert Dental Care in Rajshahi — Gentle, Specialized, Honest.</h1>
+            <p className={styles.heroSubtitle}>
+              Modern dentistry specializing in root canal treatment, aesthetic restoration, implants, and clear aligners. 
+              Two dedicated oral & dental surgeons under one roof.
+            </p>
+            <div className={styles.heroActions}>
+              <a href="tel:01773597365" className="btn btn-urgent">📞 Call Now: 01773-597365</a>
+              <Link href="/contact" className="btn btn-primary">Book Appointment</Link>
+            </div>
           </div>
         </div>
       </section>
@@ -51,16 +54,25 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>Our Core Specialties</h2>
           <div className={styles.servicesGrid}>
             <div className={styles.serviceCard}>
+              <div className={styles.serviceImageWrapper}>
+                <img src="/images/root_canal.png" alt="Root Canal Treatment" className={styles.serviceImage} />
+              </div>
               <h3>Root Canal Treatment</h3>
               <p>Save an infected or severely painful tooth safely, comfortably, and permanently without needing an extraction.</p>
               <Link href="/root-canal-treatment" className="btn btn-secondary">Learn more</Link>
             </div>
             <div className={styles.serviceCard}>
+              <div className={styles.serviceImageWrapper}>
+                <img src="/images/implant.png" alt="Dental Implants" className={styles.serviceImage} />
+              </div>
               <h3>Dental Implants</h3>
               <p>Replace missing teeth with permanent, natural-looking titanium implants for a complete and confident smile.</p>
               <Link href="/dental-implants" className="btn btn-secondary">Learn more</Link>
             </div>
             <div className={styles.serviceCard}>
+              <div className={styles.serviceImageWrapper}>
+                <img src="/images/aligner.png" alt="Clear Aligners" className={styles.serviceImage} />
+              </div>
               <h3>Clear Aligners & Diastema</h3>
               <p>Close gaps and straighten teeth discreetly. We offer specialized midline diastema closure and clear aligner therapy.</p>
               <Link href="/clear-aligners-diastema-closure" className="btn btn-secondary">Learn more</Link>
@@ -79,12 +91,14 @@ export default function Home() {
               credentials="BDS (RMU)"
               bmdc="17155"
               specialization="Root Canal & Aesthetic Restoration"
+              imageUrl="/images/doctor_male.png"
             />
             <DoctorCard 
               name="Dr. Hasna Akter Suma"
               credentials="BDS (RMU)"
               bmdc="17322"
               specialization="Implants & Clear Aligners"
+              imageUrl="/images/doctor_female.png"
             />
           </div>
         </div>
@@ -100,7 +114,7 @@ export default function Home() {
               <Link href="/doctors#hygiene" style={{ color: 'var(--color-primary-light)', textDecoration: 'underline' }}>Read about our hygiene protocols</Link>
             </div>
             <div className={styles.hygieneImage}>
-              <span>📷 Clinic & Equipment Photo (Coming Soon)</span>
+              <img src="/images/hygiene.png" alt="Sterile dental equipment" />
             </div>
           </div>
         </div>

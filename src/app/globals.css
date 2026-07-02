@@ -87,9 +87,10 @@ button {
 
 /* Utility Classes */
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-4);
+  padding: 0 var(--spacing-6);
 }
 
 .btn {
@@ -99,36 +100,77 @@ button {
   padding: var(--spacing-3) var(--spacing-6);
   border-radius: var(--radius-md);
   font-weight: 600;
-  font-family: var(--font-inter);
-  transition: all 0.2s ease;
-  text-align: center;
+  font-family: var(--font-jakarta);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
 .btn-primary:hover {
-  background-color: var(--color-text-primary);
-  color: var(--color-white);
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
 }
 
 .btn-urgent {
   background-color: var(--color-cta-urgent);
   color: var(--color-white);
 }
+
 .btn-urgent:hover {
-  background-color: hsl(24, 90%, 42%);
-  color: var(--color-white);
+  background-color: #d14000;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-.btn-secondary {
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
-.btn-secondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+
+.glass-dark {
+  background: rgba(0, 68, 85, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .visually-hidden {

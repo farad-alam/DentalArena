@@ -6,6 +6,7 @@ interface PricingItem {
   description: string;
   priceRange: string;
   note?: string;
+  badge?: string;
 }
 
 interface PricingTableProps {
@@ -27,7 +28,10 @@ export default function PricingTable({ items }: PricingTableProps) {
           {items.map((item) => (
             <tr key={item.id}>
               <td>
-                <div className={styles.serviceName}>{item.name}</div>
+                <div className={styles.serviceName}>
+                  {item.name}
+                  {item.badge && <span className={styles.badge}>{item.badge}</span>}
+                </div>
                 <div className={styles.serviceDesc}>{item.description}</div>
               </td>
               <td className={styles.price}>{item.priceRange}</td>

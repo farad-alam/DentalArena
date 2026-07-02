@@ -3,7 +3,8 @@ import styles from './BeforeAfterGallery.module.css';
 interface GalleryItem {
   id: string;
   caption: string;
-  imageUrl?: string; // Optional for now, will use placeholder if missing
+  beforeImage: string;
+  afterImage: string;
 }
 
 interface BeforeAfterGalleryProps {
@@ -16,14 +17,11 @@ export default function BeforeAfterGallery({ items }: BeforeAfterGalleryProps) {
       {items.map((item) => (
         <div key={item.id} className={styles.item}>
           <div className={styles.imageWrapper}>
-            {item.imageUrl ? (
-              // Use regular img or Next Image here later when real images are provided
-              <img src={item.imageUrl} alt={item.caption} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            ) : (
-              <div className={styles.placeholder}>
-                📷<br/>Before/After photo<br/>(Coming Soon)
-              </div>
-            )}
+            <img src={item.beforeImage} alt={`Before ${item.caption}`} className={styles.beforeImage} />
+            <img src={item.afterImage} alt={`After ${item.caption}`} className={styles.afterImage} />
+            <div className={styles.divider}></div>
+            <div className={`${styles.label} ${styles.labelBefore}`}>Before</div>
+            <div className={`${styles.label} ${styles.labelAfter}`}>After (Hover)</div>
           </div>
           <div className={styles.caption}>
             {item.caption}

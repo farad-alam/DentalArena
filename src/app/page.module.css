@@ -4,31 +4,58 @@
 }
 
 .hero {
-  background-color: var(--color-primary-light);
-  padding: var(--spacing-16) 0 var(--spacing-24);
-  text-align: center;
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-image: url('/images/clinic_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 68, 85, 0.8) 0%, rgba(0, 68, 85, 0.4) 100%);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: var(--spacing-12) 0;
+}
+
+.heroCard {
+  max-width: 700px;
+  padding: var(--spacing-12);
+  border-radius: var(--radius-lg);
 }
 
 .heroTitle {
   font-size: 3.5rem;
-  color: var(--color-primary);
+  color: var(--color-white);
   margin-bottom: var(--spacing-4);
-  max-width: 900px;
-  margin-inline: auto;
+  line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .heroSubtitle {
   font-size: 1.25rem;
-  color: var(--color-text-primary);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: var(--spacing-8);
-  max-width: 700px;
-  margin-inline: auto;
+  line-height: 1.6;
 }
 
 .heroActions {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: var(--spacing-4);
   flex-wrap: wrap;
 }
@@ -84,16 +111,46 @@
 .serviceCard {
   background-color: var(--color-white);
   padding: var(--spacing-6);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   text-align: center;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.serviceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.serviceImageWrapper {
+  width: 100%;
+  height: 200px;
+  margin-bottom: var(--spacing-6);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-surface);
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.serviceCard:hover .serviceImage {
+  transform: scale(1.05);
 }
 
 .serviceCard h3 {
   margin-bottom: var(--spacing-2);
   font-size: 1.25rem;
+  color: var(--color-primary);
 }
 
 .serviceCard p {
@@ -141,12 +198,19 @@
 }
 
 .hygieneImage {
-  background-color: rgba(255,255,255,0.1);
+  width: 100%;
   aspect-ratio: 4/3;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  position: relative;
+}
+
+.hygieneImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pricingTeaser {

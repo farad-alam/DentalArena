@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function DentalImplantsPage() {
   const galleryItems = [
-    { id: "1", caption: "Single Missing Front Tooth Restored" },
-    { id: "2", caption: "Missing Molar Replaced with Implant" }
+    { id: "1", caption: "Single Missing Front Tooth Restored", beforeImage: "/images/before_smile.png", afterImage: "/images/after_smile.png" },
+    { id: "2", caption: "Missing Molar Replaced with Implant", beforeImage: "/images/before_smile.png", afterImage: "/images/after_smile.png" }
   ];
 
   const faqs = [

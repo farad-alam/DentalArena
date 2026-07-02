@@ -7,6 +7,7 @@ interface DoctorCardProps {
   bmdc: string;
   specialization: string;
   linkHref?: string;
+  imageUrl?: string;
 }
 
 export default function DoctorCard({
@@ -14,12 +15,19 @@ export default function DoctorCard({
   credentials,
   bmdc,
   specialization,
-  linkHref = "/doctors"
+  linkHref = "/doctors",
+  imageUrl
 }: DoctorCardProps) {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <div className={styles.avatar}>👨‍⚕️</div>
+        <div className={styles.avatar}>
+          {imageUrl ? (
+            <img src={imageUrl} alt={name} />
+          ) : (
+            <span style={{ fontSize: '2rem' }}>👨‍⚕️</span>
+          )}
+        </div>
         <div className={styles.info}>
           <h3>{name}</h3>
           <p className={styles.credentials}>{credentials}</p>
