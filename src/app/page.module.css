@@ -459,7 +459,7 @@
 .teamSection {
   position: relative;
   background-color: #f8fafc;
-  padding: var(--spacing-20) 0 160px 0; /* Huge padding for background coverage */
+  padding: var(--spacing-20) 0 250px 0; /* Huge padding for background coverage */
   overflow: hidden;
 }
 
