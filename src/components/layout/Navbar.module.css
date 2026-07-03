@@ -76,19 +76,35 @@
   gap: var(--spacing-4);
 }
 
-.phone {
+.whatsappBtn {
+  display: none; /* Hide on mobile by default to match previous phone link behavior */
+  align-items: center;
+  gap: var(--spacing-2);
+  background-color: #25D366;
+  color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: 50px;
   font-weight: 600;
-  color: var(--color-text-primary);
-  display: none;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
-.phoneLight {
-  color: var(--color-white);
+.whatsappBtn:hover {
+  transform: translateY(-2px);
+  background-color: #1fad53;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+.whatsappBtnLight {
+  /* On home page, we can keep it green for visibility, or make it glassmorphic */
+  /* We'll keep it green as it's a strong CTA */
 }
 
 @media (min-width: 768px) {
-  .phone {
-    display: block;
+  .whatsappBtn {
+    display: flex;
   }
 }
 
