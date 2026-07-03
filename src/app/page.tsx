@@ -190,9 +190,12 @@ export default function Home() {
       </section>
 
       {/* 8. Patient Testimonials */}
-      <section className={styles.section}>
-        <div className="container">
-          <h2 className={styles.sectionTitle}>Real Patient Stories</h2>
+      <section className={styles.testimonialsSection}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div className={styles.testimonialsHeader}>
+            <h2 className={styles.testimonialsTitle}>Real Patient Stories</h2>
+            <p className={styles.testimonialsSubtitle}>Discover what our satisfied patients have to say about their experiences.</p>
+          </div>
           <div className={styles.testimonialsGrid}>
             <TestimonialCard 
               quote="Came in with severe pain from a molar. Dr. Fahim did a root canal in two visits, and I felt absolutely no pain during or afterward. Highly recommend!"

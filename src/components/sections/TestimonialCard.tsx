@@ -17,17 +17,12 @@ export default function TestimonialCard({
 
   return (
     <div className={styles.card}>
-      <div className={styles.watermark}>"</div>
-      <div className={styles.stars}>★★★★★</div>
-      <p className={styles.quote}>"{quote}"</p>
-      
-      <div className={styles.footer}>
-        <div className={styles.avatar}>{initial}</div>
-        <div className={styles.info}>
-          <h4>{name}{location && ` • ${location}`}</h4>
-          <p className={styles.treatment}>Treatment: {treatment}</p>
-        </div>
+      <div className={styles.avatar}>{initial}</div>
+      <div className={styles.info}>
+        <h4 className={styles.name}>{name}</h4>
+        <p className={styles.treatment}>{treatment}</p>
       </div>
+      <p className={styles.quote}>{quote}</p>
     </div>
   );
 }
