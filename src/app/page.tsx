@@ -50,7 +50,66 @@ export default function Home() {
       {/* 2. Trust & Credentials Bar */}
       <TrustBar />
 
-      {/* 3. Two-Path Problem Statement */}
+      {/* 3. Core Specialties (Redesigned) */}
+      <section className="section bg-white" id="services">
+        <div className={`container ${styles.specialtiesLayout}`}>
+          {/* Left: Image Collage */}
+          <div className={styles.specialtiesImages}>
+            <div className={styles.imageShape}></div>
+            <img src="/images/hero_patient.png" alt="Patient Care" className={styles.imageMain} />
+            <img src="/images/doctor_male.png" alt="Dentist" className={styles.imageSecondary} />
+            <div className={styles.experienceBadge}>
+              <strong>15+</strong>
+              <span>Year Of Experiences</span>
+            </div>
+            <div className={styles.circularBadge}>
+              <svg viewBox="0 0 100 100" className={styles.rotatingText}>
+                 <path id="curve" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
+                 <text><textPath href="#curve">EXPERT DENTAL CARE • DENTAL ARENA •</textPath></text>
+              </svg>
+              <div className={styles.badgeIcon}>🦷</div>
+            </div>
+          </div>
+
+          {/* Right: Content */}
+          <div className={styles.specialtiesContent}>
+            <span className={styles.specialtiesSubtitle}>DentalArena Specialties</span>
+            <h2 className={styles.specialtiesTitle}>WHY CHOOSE DENTAL ARENA.</h2>
+            <p className={styles.specialtiesDesc}>
+              Named for that happy circumstance when patients feel like family, the team at DentalArena firmly believes that your oral health is inseparable from your overall well-being. Our practice is built on strong, long-term relationships among a dentist, hygienist, and professionals who have worked together for years.
+            </p>
+            <p className={styles.specialtiesDesc}>
+              Whether it's a routine checkup or a total smile transformation—our focus is lasting wellness. We approach each patient with a holistic perspective for patients from children to seniors. We take pride in offering the latest advances and high-tech equipment in our state-of-the-art operatory.
+            </p>
+            <ul className={styles.specialtiesList}>
+              <li>
+                <span className={styles.checkIcon}>✔</span>
+                <span>Our care is built on a foundation of well-being, balance and integrity.</span>
+              </li>
+              <li>
+                <span className={styles.checkIcon}>✔</span>
+                <span>Our team values supporting one another to maintain a positive environment.</span>
+              </li>
+              <li>
+                <span className={styles.checkIcon}>✔</span>
+                <span>As a community-focused practice, we emphasize genuine connections with our patients.</span>
+              </li>
+            </ul>
+            <div className={styles.specialtiesActions}>
+              <Link href="/contact" className={`btn btn-primary ${styles.btnPill}`}>Schedule Appointment ↗</Link>
+              <div className={styles.callContact}>
+                <div className={styles.callIcon}>📞</div>
+                <div>
+                  <span className={styles.callLabel}>Call Us Now:</span>
+                  <a href="tel:01773597365" className={styles.callNumber}>+8801773-597365</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Two-Path Problem Statement */}
       <section className={styles.section}>
         <div className="container">
           <div className={styles.routingGrid}>
@@ -64,20 +123,6 @@ export default function Home() {
               <p>Self-conscious about a gap, missing tooth, or misalignment? Get specialist care for lasting, natural results.</p>
               <Link href="/dental-implants" className="btn btn-secondary" style={{ marginRight: '1rem' }}>Implants</Link>
               <Link href="/clear-aligners-diastema-closure" className="btn btn-secondary">Aligners & Diastema</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-              <Link href="/dental-implants" className="btn btn-secondary">Learn more</Link>
-            </div>
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceImageWrapper}>
-                <img src="/images/aligner.png" alt="Clear Aligners" className={styles.serviceImage} />
-              </div>
-              <h3>Clear Aligners & Diastema</h3>
-              <p>Close gaps and straighten teeth discreetly. We offer specialized midline diastema closure and clear aligner therapy.</p>
-              <Link href="/clear-aligners-diastema-closure" className="btn btn-secondary">Learn more</Link>
             </div>
           </div>
         </div>
