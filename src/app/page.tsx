@@ -126,23 +126,27 @@ export default function Home() {
       </section>
 
       {/* 5. Meet Your Doctors */}
-      <section className={styles.section}>
-        <div className="container">
-          <h2 className={styles.sectionTitle}>Meet Your Specialist Doctors</h2>
+      <section className={styles.teamSection}>
+        <div className={styles.teamBackground}>
+           <div className={styles.bgCircleTopLeft}></div>
+           <div className={styles.bgCircleBottomRight}></div>
+        </div>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <h2 className={styles.teamTitle}>Our Team</h2>
           <div className={styles.doctorsGrid}>
             <DoctorCard 
               name="Dr. Md. Fahim Faisal"
               credentials="BDS (RMU)"
               bmdc="17155"
               specialization="Root Canal & Aesthetic Restoration"
-              imageUrl="/images/doctor_male.png"
+              imageUrl="/images/doctor_male_bw.png"
             />
             <DoctorCard 
               name="Dr. Hasna Akter Suma"
               credentials="BDS (RMU)"
               bmdc="17322"
               specialization="Implants & Clear Aligners"
-              imageUrl="/images/doctor_female.png"
+              imageUrl="/images/doctor_female_bw.png"
             />
           </div>
         </div>

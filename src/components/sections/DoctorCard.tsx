@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import styles from './DoctorCard.module.css';
 
 interface DoctorCardProps {
@@ -20,28 +19,25 @@ export default function DoctorCard({
 }: DoctorCardProps) {
   return (
     <div className={styles.card}>
-      <div className={styles.header}>
-        <div className={styles.avatar}>
-          {imageUrl ? (
-            <img src={imageUrl} alt={name} />
-          ) : (
-            <span style={{ fontSize: '2rem' }}>👨‍⚕️</span>
-          )}
-        </div>
-        <div className={styles.info}>
-          <h3>{name}</h3>
-          <p className={styles.credentials}>{credentials}</p>
-          <p className={styles.credentials}>BMDC Reg: {bmdc}</p>
+      <div className={styles.imageSection}>
+        {imageUrl ? (
+          <img src={imageUrl} alt={name} className={styles.image} />
+        ) : (
+          <div className={styles.placeholderImage}>👨‍⚕️</div>
+        )}
+      </div>
+      <div className={styles.infoSection}>
+        <h3 className={styles.name}>{name}</h3>
+        <p className={styles.designation}>{credentials}</p>
+        <p className={styles.description}>
+          Specializing in {specialization}. BMDC Reg: {bmdc}
+        </p>
+        <div className={styles.socials}>
+           <span>f</span>
+           <span>in</span>
+           <span>x</span>
         </div>
       </div>
-      
-      <div className={styles.specialization}>
-        Specializes in: {specialization}
-      </div>
-      
-      <Link href={linkHref} className={styles.link}>
-        View Full Profile <span>→</span>
-      </Link>
     </div>
   );
 }
