@@ -6,17 +6,29 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={`container`}>
         <div className={styles.grid}>
-          <div className={styles.brand}>
-            <h3>DentalArena</h3>
-            <p>76, Bospara, Bazar–Talaimari Road</p>
-            <p>Rajshahi (near Shah Makhdoom College)</p>
-            <p>Sat–Thu 10AM–10PM, Fri by appointment</p>
-            <p style={{ marginTop: '1rem', color: 'var(--color-white)' }}>
-              <strong>Appointment: 01773-597365</strong>
+          {/* Column 1 */}
+          <div className={styles.col}>
+            <div className={styles.brandContainer}>
+              <div className={styles.logoIcon}>🦷</div>
+              <h3 className={styles.brandTitle}>DentalArena.</h3>
+            </div>
+            <p className={styles.textMuted}>
+              76, Bospara, Bazar–Talaimari Road<br/>
+              Rajshahi (near Shah Makhdoom College)<br/>
+              Sat–Thu 10AM–10PM, Fri by appointment
+            </p>
+            <div className={styles.socials}>
+              <span>f</span>
+              <span>in</span>
+              <span>x</span>
+            </div>
+            <p className={styles.appointmentText}>
+              Appointment: <strong>01773-597365</strong>
             </p>
           </div>
           
-          <div>
+          {/* Column 2 */}
+          <div className={styles.col}>
             <h4 className={styles.heading}>Services</h4>
             <div className={styles.links}>
               <Link href="/root-canal-treatment" className={styles.link}>Root Canal Treatment</Link>
@@ -27,7 +39,8 @@ export default function Footer() {
             </div>
           </div>
           
-          <div>
+          {/* Column 3 */}
+          <div className={styles.col}>
             <h4 className={styles.heading}>Clinic</h4>
             <div className={styles.links}>
               <Link href="/doctors" className={styles.link}>Our Doctors</Link>
@@ -35,17 +48,30 @@ export default function Footer() {
               <Link href="/contact" className={styles.link}>Contact Us</Link>
             </div>
             
-            <div style={{ marginTop: '1.5rem' }}>
-              <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>BMDC Registration:</p>
-              <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Dr. Fahim: 17155 | Dr. Suma: 17322</p>
-              <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Verify by texting number to 16321</p>
+            <div className={styles.bmdc}>
+              <p>BMDC Registration:</p>
+              <p>Dr. Fahim: 17155 | Dr. Suma: 17322</p>
+              <p>Verify by texting number to 16321</p>
             </div>
+          </div>
+
+          {/* Column 4 - Contact Form (matching design) */}
+          <div className={styles.col}>
+             <h4 className={styles.heading}>Contact us from</h4>
+             <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
+               <input type="text" placeholder="Full name" className={styles.input} />
+               <input type="text" placeholder="Enter email or phone" className={styles.input} />
+               <textarea placeholder="Message" className={styles.textarea} rows={4}></textarea>
+               <button type="button" className={styles.submitBtn}>Send message</button>
+             </form>
           </div>
         </div>
         
         <div className={styles.bottom}>
           <p>&copy; {new Date().getFullYear()} DentalArena Rajshahi. All rights reserved.</p>
-          <Link href="/privacy-policy" className={styles.link}>Privacy Policy</Link>
+          <div className={styles.bottomLinks}>
+            <Link href="/privacy-policy" className={styles.link}>Privacy Policy</Link>
+          </div>
         </div>
       </div>
     </footer>

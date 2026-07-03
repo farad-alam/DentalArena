@@ -1,37 +1,82 @@
-.section {
-  padding: var(--spacing-16) 0;
-  background-color: var(--color-primary-light);
-  text-align: center;
+.sectionWrapper {
+  padding: var(--spacing-16) 0 var(--spacing-24) 0;
+  background-color: #0b1121; /* Match the dark theme or the footer's top */
 }
 
 .container {
-  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 1000px;
+  background: linear-gradient(180deg, rgba(30,58,138,0.3) 0%, rgba(11,17,33,0) 100%);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 40px;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .title {
-  color: var(--color-primary);
-  margin-bottom: var(--spacing-4);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--spacing-6);
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #93c5fd; /* Light blue */
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: var(--color-text-primary);
-  margin-bottom: var(--spacing-8);
-  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: var(--spacing-12);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .actions {
   display: flex;
-  align-items: center;
   justify-content: center;
   gap: var(--spacing-4);
   flex-wrap: wrap;
 }
 
-.phoneLink {
-  font-weight: 700;
-  color: var(--color-primary);
-  font-size: 1.1rem;
-  margin-top: var(--spacing-6);
-  display: block;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btnPrimary {
+  background-color: white;
+  color: #0b1121;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+}
+
+.btnSecondary {
+  background-color: rgba(255,255,255,0.05);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.btnSecondary:hover {
+  background-color: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
 }

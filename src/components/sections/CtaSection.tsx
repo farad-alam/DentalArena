@@ -20,44 +20,46 @@ export default function CtaSection({
   secondaryCtaText,
   secondaryCtaLink
 }: CtaSectionProps) {
+  const words = title.split(' ');
+  const lastWord = words.pop();
+  const restOfTitle = words.join(' ');
+
   return (
-    <section className={styles.section}>
+    <section className={styles.sectionWrapper}>
       <div className={`container ${styles.container}`}>
-        <h2 className={styles.title}>{title}</h2>
-        <p className={styles.subtitle}>{subtitle}</p>
-        
-        <div className={styles.actions}>
-          {primaryCtaLink.startsWith('tel:') ? (
-            <a 
-              href={primaryCtaLink} 
-              className={`btn ${primaryCtaUrgent ? 'btn-urgent' : 'btn-primary'}`}
-            >
-              {primaryCtaText}
-            </a>
-          ) : (
-            <Link 
-              href={primaryCtaLink} 
-              className={`btn ${primaryCtaUrgent ? 'btn-urgent' : 'btn-primary'}`}
-            >
-              {primaryCtaText}
-            </Link>
-          )}
+        <div className={styles.card}>
+          <h2 className={styles.title}>
+            {restOfTitle} <span className={styles.highlight}>{lastWord}</span>
+          </h2>
+          <p className={styles.subtitle}>{subtitle}</p>
           
-          {secondaryCtaText && secondaryCtaLink && (
-            <Link 
-              href={secondaryCtaLink} 
-              className="btn btn-secondary"
-            >
-              {secondaryCtaText}
-            </Link>
-          )}
+          <div className={styles.actions}>
+            {primaryCtaLink.startsWith('tel:') ? (
+              <a 
+                href={primaryCtaLink} 
+                className={`${styles.btn} ${styles.btnPrimary}`}
+              >
+                <span className={styles.icon}>📞</span> {primaryCtaText}
+              </a>
+            ) : (
+              <Link 
+                href={primaryCtaLink} 
+                className={`${styles.btn} ${styles.btnPrimary}`}
+              >
+                {primaryCtaText}
+              </Link>
+            )}
+            
+            {secondaryCtaText && secondaryCtaLink && (
+              <Link 
+                href={secondaryCtaLink} 
+                className={`${styles.btn} ${styles.btnSecondary}`}
+              >
+                📅 {secondaryCtaText}
+              </Link>
+            )}
+          </div>
         </div>
-        
-        {!primaryCtaLink.startsWith('tel:') && (
-          <a href="tel:01773597365" className={styles.phoneLink}>
-            Or call us directly: 01773-597365
-          </a>
-        )}
       </div>
     </section>
   );
