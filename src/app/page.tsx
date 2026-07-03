@@ -51,7 +51,7 @@ export default function Home() {
       <TrustBar />
 
       {/* 3. Core Specialties (Redesigned) */}
-      <section className="section bg-white" id="services">
+      <section className="section" id="services" style={{ backgroundColor: '#f7fbfc' }}>
         <div className={`container ${styles.specialtiesLayout}`}>
           {/* Left: Image Collage */}
           <div className={styles.specialtiesImages}>
