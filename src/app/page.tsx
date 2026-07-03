@@ -78,9 +78,6 @@ export default function Home() {
             <p className={styles.specialtiesDesc}>
               Named for that happy circumstance when patients feel like family, the team at DentalArena firmly believes that your oral health is inseparable from your overall well-being. Our practice is built on strong, long-term relationships among a dentist, hygienist, and professionals who have worked together for years.
             </p>
-            <p className={styles.specialtiesDesc}>
-              Whether it's a routine checkup or a total smile transformation—our focus is lasting wellness. We approach each patient with a holistic perspective for patients from children to seniors. We take pride in offering the latest advances and high-tech equipment in our state-of-the-art operatory.
-            </p>
             <ul className={styles.specialtiesList}>
               <li>
                 <span className={styles.checkIcon}>✔</span>

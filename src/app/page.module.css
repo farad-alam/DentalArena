@@ -251,8 +251,8 @@
 
 .imageShape {
   position: absolute;
-  top: 10%;
-  left: 0;
+  bottom: 10%;
+  right: 5%;
   width: 70%;
   height: 80%;
   background-color: var(--color-primary); /* Teal shape */
@@ -263,9 +263,9 @@
 .imageMain {
   position: absolute;
   top: 0;
-  right: 5%;
-  width: 80%;
-  height: 75%;
+  left: 0;
+  width: 75%;
+  height: 70%;
   object-fit: cover;
   border-radius: var(--radius-lg);
   z-index: 2;
@@ -274,10 +274,10 @@
 
 .imageSecondary {
   position: absolute;
-  bottom: 0;
-  left: 15%;
-  width: 60%;
-  height: 60%;
+  bottom: 5%;
+  right: 0;
+  width: 55%;
+  height: 55%;
   object-fit: cover;
   border-radius: var(--radius-lg);
   z-index: 3;
@@ -287,8 +287,8 @@
 
 .experienceBadge {
   position: absolute;
-  bottom: 5%;
-  left: 0;
+  bottom: 10%;
+  left: 5%;
   z-index: 4;
   background: var(--color-white);
   padding: var(--spacing-3) var(--spacing-4);
@@ -313,7 +313,8 @@
 .circularBadge {
   position: absolute;
   top: 40%;
-  right: -5%;
+  left: 60%; /* Placed between the two images */
+  transform: translateX(-50%);
   z-index: 4;
   width: 120px;
   height: 120px;
