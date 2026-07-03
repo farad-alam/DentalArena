@@ -132,7 +132,7 @@ export default function Home() {
            <div className={styles.bgCircleBottomRight}></div>
         </div>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <h2 className={styles.teamTitle}>Our Team</h2>
+          <h2 className={styles.teamTitle}>Meet Your Specialist Doctors</h2>
           <div className={styles.doctorsGrid}>
             <DoctorCard 
               name="Dr. Md. Fahim Faisal"

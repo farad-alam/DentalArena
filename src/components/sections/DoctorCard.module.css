@@ -76,27 +76,18 @@
   overflow: hidden;
 }
 
-.socials {
-  display: flex;
-  gap: var(--spacing-4);
+.link {
   margin-top: auto;
-}
-
-.socials span {
-  width: 30px;
-  height: 30px;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: transparent;
-  font-size: 1rem;
+  gap: var(--spacing-2);
   color: white;
-  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
   transition: color 0.2s;
-  font-weight: bold;
 }
 
-.socials span:hover {
+.link:hover {
   color: #93c5fd;
 }

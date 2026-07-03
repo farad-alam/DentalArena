@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './DoctorCard.module.css';
 
 interface DoctorCardProps {
@@ -30,13 +31,12 @@ export default function DoctorCard({
         <h3 className={styles.name}>{name}</h3>
         <p className={styles.designation}>{credentials}</p>
         <p className={styles.description}>
-          Specializing in {specialization}. BMDC Reg: {bmdc}
+          Specializing in: {specialization} <br />
+          BMDC Reg: {bmdc}
         </p>
-        <div className={styles.socials}>
-           <span>f</span>
-           <span>in</span>
-           <span>x</span>
-        </div>
+        <Link href={linkHref} className={styles.link}>
+          View Full Profile <span>→</span>
+        </Link>
       </div>
     </div>
   );
