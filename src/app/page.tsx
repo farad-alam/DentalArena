@@ -11,18 +11,51 @@ export default function Home() {
       {/* 1. Hero */}
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
-        <div className={`container ${styles.heroContent}`}>
-          <div className={`glass-dark animate-fade-in-up ${styles.heroCard}`}>
-            <h1 className={styles.heroTitle}>Expert Dental Care in Rajshahi — Gentle, Specialized, Honest.</h1>
-            <p className={styles.heroSubtitle}>
-              Modern dentistry specializing in root canal treatment, aesthetic restoration, implants, and clear aligners. 
-              Two dedicated oral & dental surgeons under one roof.
-            </p>
-            <div className={styles.heroActions}>
-              <a href="tel:01773597365" className="btn btn-urgent">📞 Call Now: 01773-597365</a>
-              <Link href="/contact" className="btn btn-primary">Book Appointment</Link>
+        
+        {/* Left Content */}
+        <div className={styles.heroContent}>
+          <h1 className={styles.heroTitle}>
+            Expert Dental Care<br />
+            in Rajshahi
+          </h1>
+          <p className={styles.heroSubtitle}>
+            Modern dentistry specializing in root canal treatment, aesthetic restoration, implants, and clear aligners. 
+            Two dedicated oral & dental surgeons under one roof.
+          </p>
+          
+          <Link href="/contact" className={styles.heroButton}>
+            Book a Appointment
+            <span className={styles.heroButtonIcon}>→</span>
+          </Link>
+
+          <div className={styles.floatingCard}>
+            <img src="/images/clinic_bg.png" alt="Dental Care" className={styles.floatingCardThumb} />
+            <h3 className={styles.floatingCardTitle}>Restore natural healthy confident dental growth.</h3>
+            <div className={styles.floatingCardFooter}>
+              <span>⭐ 4.9 [Rating]</span>
+              <span>↗</span>
             </div>
           </div>
+        </div>
+
+        {/* Right Tags */}
+        <div className={styles.servicesTags}>
+          <span className={`${styles.tag} ${styles.tagActive}`}>Root Canal</span>
+          <span className={styles.tag}>Implants</span>
+          <span className={styles.tag}>Clear Aligners</span>
+          <span className={styles.tag}>Diastema Closure</span>
+          <span className={styles.tag}>Aesthetic Restorations</span>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className={styles.bottomBar}>
+          <span>Your Teeth Our Science</span>
+          <div className={styles.sliderControls}>
+            <span>Preview</span>
+            <span>01 / 05</span>
+            <span>Next</span>
+          </div>
+          <span>Scroll for More</span>
         </div>
       </section>
 

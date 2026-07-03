@@ -4,6 +4,17 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.transparent .container {
+  /* To separate it slightly from the top */
+  padding-top: var(--spacing-4);
 }
 
 .container {
@@ -23,6 +34,10 @@
   gap: var(--spacing-2);
 }
 
+.logoLight {
+  color: var(--color-white);
+}
+
 .navLinks {
   display: flex;
   align-items: center;
@@ -40,6 +55,21 @@
   color: var(--color-primary);
 }
 
+.navLinksLight .navLink {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 6px 16px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.navLinksLight .navLink:hover {
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .actions {
   display: flex;
   align-items: center;
@@ -52,6 +82,10 @@
   display: none;
 }
 
+.phoneLight {
+  color: var(--color-white);
+}
+
 @media (min-width: 768px) {
   .phone {
     display: block;
@@ -62,6 +96,13 @@
   display: none;
   font-size: 1.5rem;
   color: var(--color-text-primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobileMenuBtnLight {
+  color: var(--color-white);
 }
 
 @media (max-width: 900px) {
