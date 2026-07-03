@@ -69,25 +69,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Services Overview */}
-      <section className={styles.section} style={{ backgroundColor: 'var(--color-surface)' }}>
-        <div className="container">
-          <h2 className={styles.sectionTitle}>Our Core Specialties</h2>
-          <div className={styles.servicesGrid}>
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceImageWrapper}>
-                <img src="/images/root_canal.png" alt="Root Canal Treatment" className={styles.serviceImage} />
-              </div>
-              <h3>Root Canal Treatment</h3>
-              <p>Save an infected or severely painful tooth safely, comfortably, and permanently without needing an extraction.</p>
-              <Link href="/root-canal-treatment" className="btn btn-secondary">Learn more</Link>
-            </div>
-            <div className={styles.serviceCard}>
-              <div className={styles.serviceImageWrapper}>
-                <img src="/images/implant.png" alt="Dental Implants" className={styles.serviceImage} />
-              </div>
-              <h3>Dental Implants</h3>
-              <p>Replace missing teeth with permanent, natural-looking titanium implants for a complete and confident smile.</p>
               <Link href="/dental-implants" className="btn btn-secondary">Learn more</Link>
             </div>
             <div className={styles.serviceCard}>

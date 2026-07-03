@@ -228,67 +228,232 @@
   color: var(--color-primary);
 }
 
-.servicesGrid {
+.specialtiesLayout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-8);
+  gap: var(--spacing-12);
+  align-items: center;
+  padding: var(--spacing-16) 5%;
 }
 
-@media (min-width: 768px) {
-  .servicesGrid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 900px) {
+  .specialtiesLayout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-16);
   }
 }
 
-.serviceCard {
-  background-color: var(--color-white);
-  padding: var(--spacing-6);
+.specialtiesImages {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+
+.imageShape {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 70%;
+  height: 80%;
+  background-color: var(--color-primary); /* Teal shape */
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  text-align: center;
+  z-index: 1;
+}
+
+.imageMain {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 80%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  z-index: 2;
+  box-shadow: var(--shadow-md);
+}
+
+.imageSecondary {
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  z-index: 3;
+  box-shadow: var(--shadow-lg);
+  border: 8px solid var(--color-white);
+}
+
+.experienceBadge {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  z-index: 4;
+  background: var(--color-white);
+  padding: var(--spacing-3) var(--spacing-4);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,0.03);
 }
 
-.serviceCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+.experienceBadge strong {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-primary);
 }
 
-.serviceImageWrapper {
-  width: 100%;
-  height: 200px;
-  margin-bottom: var(--spacing-6);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  position: relative;
-  background-color: var(--color-surface);
+.experienceBadge span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
 }
 
-.serviceImage {
+.circularBadge {
+  position: absolute;
+  top: 40%;
+  right: -5%;
+  z-index: 4;
+  width: 120px;
+  height: 120px;
+  background: var(--color-white);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotatingText {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  animation: rotate 15s linear infinite;
 }
 
-.serviceCard:hover .serviceImage {
-  transform: scale(1.05);
+.rotatingText text {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  fill: var(--color-primary);
 }
 
-.serviceCard h3 {
-  margin-bottom: var(--spacing-2);
-  font-size: 1.25rem;
+.badgeIcon {
+  font-size: 2rem;
+  /* Not putting color so it relies on emoji native colors, or if SVG we'd use color */
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.specialtiesContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.specialtiesSubtitle {
+  font-family: 'Brush Script MT', cursive, sans-serif;
+  font-size: 2rem;
   color: var(--color-primary);
+  margin-bottom: var(--spacing-2);
 }
 
-.serviceCard p {
-  color: var(--color-text-muted);
+.specialtiesTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.1;
   margin-bottom: var(--spacing-6);
-  flex-grow: 1;
+  text-transform: uppercase;
+}
+
+.specialtiesDesc {
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-4);
+}
+
+.specialtiesList {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-6) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.specialtiesList li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.specialtiesList li strong {
+  color: var(--color-text-primary);
+}
+
+.checkIcon {
+  color: var(--color-white);
+  background: var(--color-primary);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.specialtiesActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-6);
+  flex-wrap: wrap;
+}
+
+.btnPill {
+  border-radius: 50px !important;
+  padding: 12px 28px !important;
+}
+
+.callContact {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.callIcon {
+  background: var(--color-text-primary);
+  color: var(--color-white);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.callLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.callNumber {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .doctorsGrid {
