@@ -27,15 +27,6 @@ export default function Home() {
               Book a Appointment
               <span className={styles.heroButtonIcon}>→</span>
             </Link>
-
-            <div className={styles.floatingCard}>
-              <img src="/images/clinic_bg.png" alt="Dental Care" className={styles.floatingCardThumb} />
-              <h3 className={styles.floatingCardTitle}>Restore natural healthy confident dental growth.</h3>
-              <div className={styles.floatingCardFooter}>
-                <span>⭐ 4.9 [Rating]</span>
-                <span>↗</span>
-              </div>
-            </div>
           </div>
 
           {/* Right Tags */}
