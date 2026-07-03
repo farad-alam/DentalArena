@@ -24,12 +24,10 @@ export default function Navbar() {
           <Link href="/clear-aligners-diastema-closure" className={styles.navLink}>Aligners & Diastema</Link>
           <Link href="/pricing" className={styles.navLink}>Pricing</Link>
           <Link href="/doctors" className={styles.navLink}>Doctors</Link>
-          <Link href="/faq" className={styles.navLink}>FAQ</Link>
         </nav>
 
         <div className={styles.actions}>
           <a href="tel:01773597365" className={`${styles.phone} ${isHome ? styles.phoneLight : ''}`}>📞 01773-597365</a>
-          <Link href="/contact" className="btn btn-primary">Book Appointment</Link>
           <button className={`${styles.mobileMenuBtn} ${isHome ? styles.mobileMenuBtnLight : ''}`} aria-label="Menu">
             ☰
           </button>
