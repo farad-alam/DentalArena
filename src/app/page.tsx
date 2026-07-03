@@ -65,7 +65,7 @@ export default function Home() {
             <div className={styles.circularBadge}>
               <svg viewBox="0 0 100 100" className={styles.rotatingText}>
                  <path id="curve" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent"/>
-                 <text><textPath href="#curve">EXPERT DENTAL CARE • DENTAL ARENA •</textPath></text>
+                 <text><textPath href="#curve">DENTAL ARENA • DENTAL ARENA • DENTAL ARENA • </textPath></text>
               </svg>
               <div className={styles.badgeIcon}>🦷</div>
             </div>
@@ -76,7 +76,7 @@ export default function Home() {
             <span className={styles.specialtiesSubtitle}>DentalArena Specialties</span>
             <h2 className={styles.specialtiesTitle}>WHY CHOOSE DENTAL ARENA.</h2>
             <p className={styles.specialtiesDesc}>
-              Named for that happy circumstance when patients feel like family, the team at DentalArena firmly believes that your oral health is inseparable from your overall well-being. Our practice is built on strong, long-term relationships among a dentist, hygienist, and professionals who have worked together for years.
+              At DentalArena, we treat our patients like family. We believe your oral health is deeply connected to your overall well-being, and our practice is built on strong, long-term relationships and expert care.
             </p>
             <ul className={styles.specialtiesList}>
               <li>

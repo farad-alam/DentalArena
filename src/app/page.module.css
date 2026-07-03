@@ -312,9 +312,8 @@
 
 .circularBadge {
   position: absolute;
-  top: 40%;
-  left: 60%; /* Placed between the two images */
-  transform: translateX(-50%);
+  top: -5%;
+  right: -5%;
   z-index: 4;
   width: 120px;
   height: 120px;
